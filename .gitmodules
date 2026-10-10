@@ -1,0 +1,3 @@
+[submodule "packing195"]
+	path = upstream/packing195
+	url = https://github.com/congyuemao/strong-edge-packing-195.git
