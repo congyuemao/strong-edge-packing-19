@@ -1,12 +1,12 @@
 # Induced-matching packing in maximum-degree-four graphs: from 19.5 to 19
 
-This repository studies the conjectured prescribed-edge bound
+This repository proves the prescribed-edge bound
 
 \[
 |F|\le 19\nu_s^G(F)+t_G(F).
 \]
 
-**Status on 11 October 2026: Route B contains a complete paper proof and a partially completed Lean formalization.** The new Lean extension verifies the compensation identity, tertiary normalization, nineteen-clique rigidity, and exclusion of critical degree nineteen. The new Stage 2 exclusions for degrees twenty through twenty-three and the full corrected 19 theorem remain to be formalized. The complete Lean-certified packing bound remains 19.5.
+**Status on 11 October 2026: the corrected 19 theorem is Lean-verified for every candidate set and every matching number.** The independent Route B extension proves the matching-witness statement, the independence-number statement, and the correction by actual original connected components. See [the main theorems](route-b/lean/StrongEdge19/Main.lean) and [the recorded build and axiom audit](route-b/verification/lean-extension/README.md).
 
 All strong conflicts are evaluated in the complete original graph `G`. Original edges outside `F` remain available as conflict witnesses. The correction `t_G(F)` counts only original `C5[2]` components whose entire twenty-edge sets belong to `F`.
 
@@ -34,9 +34,9 @@ The upstream Git submodule is fixed at commit `2e91b05b25a4ee931a0490fefcdbb4f25
 - [Lean main theorem](upstream/packing195/lean/StrongEdge/TightComponents.lean)
 - [Existing local 39 bound](upstream/packing195/lean/StrongEdge/MinimalPacking195.lean)
 
-New paper arguments are identified separately from existing Lean theorems. Upstream build logs do not certify the new arguments.
+The new extension and its verification records are separate from the existing Lean theorems and historical upstream build logs.
 
-On paper, Stage 2 reduces every zero-deficit centre to a private nineteen-clique whose members have full conflict degree at least nineteen. Stage 3 proves that such a clique lies in an original `C5[2]` component; that rigidity statement is now also checked in the new Lean extension. The paper chain then excludes all zero-deficit centres after component removal and yields `sum delta + R >= |M|` for arbitrary matching number. Its Stage 2 reduction is still pending formalization.
+The checked proof excludes all five zero-deficit cases for a tertiary-optimal maximum independent set after removing fully selected exceptional components. It proves the stronger pointwise statement `delta(e) >= 1`, hence `sum delta + R >= |M|` for arbitrary matching number. Restoring each exceptional component adds one matching edge and one correction unit. The pinned 19.5 project remains unchanged.
 
 The new proof uses original-graph degree and neighbour saturation, including unselected original witness edges. The finite checks concern explicitly stated templates and boundary examples; they are not an exhaustive search over original graphs or a substitute for formal verification.
 

@@ -97,8 +97,13 @@ try {
         source_hashes = $hashes
         source_files_unchanged_after_verification = $true
         log = 'build-and-audit.log'
-        scope = 'Exact compensation, tertiary normalization, high19 nineteen-clique rigidity, and exclusion of critical degree nineteen. Stage 2 critical degrees twenty through twenty-three and the full corrected nineteen theorem are not yet formalized.'
-        full_corrected_nineteen_theorem_formalized = $false
+        scope = 'Unconditional corrected nineteen packing for every candidate set, including the independence-number form and literal connected-component correction. Includes exact compensation, tertiary normalization, all five critical-degree exclusions, and high19 nineteen-clique rigidity.'
+        full_corrected_nineteen_theorem_formalized = $true
+        main_declarations = @(
+            'StrongEdge19.induced_matching_packing19_unconditional',
+            'StrongEdge19.induced_matching_packing19_with_connected_component_count',
+            'StrongEdge19.prescribed_edge_bound19'
+        )
     }
     [IO.File]::WriteAllText($recordPath, ($result | ConvertTo-Json -Depth 8) + "`n", $utf8)
     Write-Output "PASS: $($sourceFiles.Count) Lean files; $($entries.Count) declaration audits; no additional axioms."

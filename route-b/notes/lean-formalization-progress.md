@@ -1,8 +1,8 @@
-# Lean formalization checkpoint
+# Lean formalization record
 
 Date: 11 October 2026 (Australia/Sydney).
 
-The [independent Lean extension](../lean/README.md) formalizes the central Stage 1 identity and normalization, the Stage 3 nineteen-clique rigidity theorem, and its application to a degree-nineteen critical centre. The new Stage 2 exclusions for degrees twenty through twenty-three remain paper results. Accordingly, the general corrected nineteen bound is still not a Lean theorem.
+The [independent Lean extension](../lean/README.md) now proves the unconditional corrected nineteen bound, with the literal original connected-component correction. It checks the Stage 1 identity and normalization, the required Stage 2 structural improvements, Stage 3 nineteen-clique rigidity, all critical-degree exclusions, and the final packing argument. The upstream 19.5 source is unchanged.
 
 The verified normalization has no assumption that the original neighbourhood is already selected. It first finds a private witness at the next threshold, then uses the tertiary exchange to prove equality of full and candidate centre degrees. Equality of the nested finite neighbourhoods then proves full-neighbourhood closure.
 
@@ -25,10 +25,31 @@ This avoids a separate explicit classification of labelled four-cycles in the qu
 
 For a tertiary-optimal centre with zero deficit and candidate degree nineteen, the private clique has nineteen members, all of full conflict degree at least nineteen. Rigidity gives a containing original twenty-clique. Its members all conflict with the centre, except the centre itself. Full-neighbourhood closure therefore places the entire twenty-clique in the candidate set.
 
-The checked corollary rules out this case whenever wholly selected twenty-cliques have been excluded. The order of formalization differs from the paper's order: the degree-nineteen case is now checked, while the Stage 2 arguments excluding degrees twenty through twenty-three are still pending.
+The checked corollary rules out this case whenever wholly selected twenty-cliques have been excluded. The other four critical degrees are now excluded by the Stage 2 arguments below.
+
+## Adaptations of the Stage 2 proof
+
+At a four-selected-edge root, the new small-type argument proves at most eight selected type edges at full threshold twenty-one. For distinct disjoint full double types, every selected tip belongs to the union of their two residual original neighbourhoods, so there are at most four selected tips. Three equal full double types instead permit at most five tips. These counts supply the root bounds sixteen, fifteen, and thirteen at thresholds twenty-one, twenty-two, and twenty-three.
+
+The high20 proof establishes the unconditional strong-clique bound seventeen. Its unique-triple branch uses two finite incidence arguments:
+
+1. Three selected outer edges on at most four multiple tips contain an edge whose two endpoints each have two selected outer incidences. Their two type neighbours then saturate their original degrees. A selected edge at the triple must have its other endpoint among those multiple tips, because otherwise it cannot conflict with the saturated edge. All outer edges would lie in a restricted original graph of maximum degree two with a leaf, where a strong clique has at most three edges.
+2. Four selected outer edges on at most four multiple tips saturate every tip. Complementary types produce four distinct tips around any selected edge. An outer edge avoiding its endpoints contributes a fifth original edge inside its cover, in addition to the four type edges. The exact original incidence bound then forces full conflict degree at most nineteen, contradicting the threshold twenty.
+
+This avoids a separate enumeration of labelled paths and four-cycles. The quadruple case sharpens the conclusion of the existing upstream argument to one outer edge. The two-triple case uses selected saturation and the already checked nesting obstruction. The small-type case has at most seventeen edges directly.
+
+The private selected-subcubic lemma is also checked: at a closed private centre of full degree at least twenty-one, each centre endpoint has an original edge missing from the private clique. That edge is still a candidate and is covered by another centre. Its other endpoint cannot support any private edge. The two resulting unused vertices in the six-vertex cover leave at most twelve private incidences, plus the centre itself. Thus the private clique has at most thirteen edges. The helper lemmas explicitly allow any original connecting edge as a conflict witness.
+
+## Completed compensation and component restoration
+
+`zero_deficit_impossible` combines the five critical-degree exclusions. The upstream local 39 bound gives nonnegative integer deficits; excluding zero yields `deficit_pos_of_no_twenty_clique`. Summing proves the Route B compensation budget for every tertiary-optimal maximum independent set.
+
+`Packing.lean` applies the exact identity to obtain the nineteen bound when no twenty-clique is wholly selected. `Main.lean` restores such cliques by induction on the candidate set. The original conflict graph stays fixed throughout. Upstream rigidity makes each removed clique conflict-closed, so one of its edges can be added to the remaining matching. Twenty restored candidates cost nineteen units from that matching edge and one unit of correction.
+
+The upstream support-count comparison and connected-component equivalence identify the correction with the number of fully selected original `C5[2]` components. `prescribed_edge_bound19` then expresses the result directly through mathlib's `indepNum` of the candidate-induced original conflict graph. The explicit matching-number-at-most-two corollary bounds the candidate count by thirty-eight when the correction vanishes.
 
 ## Evidence and limits
 
 The [verification record](../verification/lean-extension/results.json) identifies the exact source hashes, Lean version, reused upstream revision, and axiom audit scope. The [raw log](../verification/lean-extension/build-and-audit.log) is compiler output, not a hand-written success summary.
 
-Successful checking of these statements does not certify the remaining Stage 2 proof or the complete corrected nineteen theorem. No computational search is used as a replacement for a universal structural argument in the checked statements.
+The complete corrected nineteen theorem is included in this audit. No computational search replaces a universal structural argument. The old Stage 2 exchange arguments specific to matching numbers two and three are not separate formalized dependencies; the general theorem subsumes their packing conclusions. The explicit sharpness construction remains a paper and finite-check example.

@@ -2,7 +2,7 @@
 
 Date: 11 October 2026 (Australia/Sydney).
 
-**Status: paper proof, not Lean-formalized.** The arguments below use the pinned upstream structural lemmas and the Stage 1 normalization. The accompanying finite checks validate specific obstruction templates and boundary examples; they are not an exhaustive search over original graphs and do not certify this proof in Lean.
+**Status: paper derivation; the structural improvements needed for the general theorem are now Lean-verified.** The [new extension](../lean/README.md) formalizes the high20 seventeen-clique bound, the high21-high23 root bounds, and the closed private-centre lemma. Its general corrected 19 theorem subsumes the packing conclusions below. The separate small-matching-number exchange arguments are not formalized line by line. The finite checks remain evidence only for their stated templates and boundary examples.
 
 **Subsequent result:** [Stage 3](route-b-stage3.md) resolves the configuration left open at the end of this stage and supplies a general paper proof. The statements of what remained open below describe the Stage 2 boundary.
 

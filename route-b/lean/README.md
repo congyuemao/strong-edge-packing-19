@@ -2,7 +2,14 @@
 
 This is an independent extension of the fixed 19.5 development. Its namespace is `StrongEdge19`; the upstream namespace remains `StrongEdge`. The upstream mathematical source, toolchain, and dependency lockfiles are unchanged.
 
-**The full corrected nineteen-packing theorem is not yet formalized.** This checkpoint certifies the exact compensation identity, tertiary normalization of every zero-deficit centre, the new nineteen-clique rigidity theorem, and exclusion of the critical degree-nineteen case. Critical degrees twenty through twenty-three still require the new Stage 2 arguments.
+**The full corrected nineteen-packing theorem is formalized.** The principal result is `StrongEdge19.prescribed_edge_bound19` in [Main.lean](StrongEdge19/Main.lean):
+
+```lean
+F.card ≤ 19 * ((conflictGraph G).induce (F : Set G.edgeSet)).indepNum +
+  (tightComponentsIn G F).card
+```
+
+Its only graph hypothesis is `∀ x, G.degree x ≤ 4`, in a finite simple graph. All conflicts use `G`, including unselected original edges. The upstream component certificate and connected-component count supply exactly the specified correction. The module also provides an induced-matching witness and the zero-correction specialization.
 
 ## Checked results
 
@@ -19,6 +26,12 @@ This is an independent extension of the fixed 19.5 development. Its namespace is
 | A closed original support with at most ten vertices | [ClosedCore.lean](StrongEdge19/ClosedCore.lean) | `high19_large_clique_closed_ten_support` |
 | Nineteen-clique extension to a whole doubled five-cycle | [NineteenRigidity.lean](StrongEdge19/NineteenRigidity.lean) | `high19_nineteen_clique_in_five_cycle_blowup` |
 | Degree-nineteen critical centres force a wholly selected twenty-clique | [CriticalNineteen.lean](StrongEdge19/CriticalNineteen.lean) | `critical_degree_nineteen_forces_selected_twenty` |
+| Full-degree-at-least-twenty strong cliques have at most seventeen edges | [High20Root.lean](StrongEdge19/High20Root.lean) | `high20_clique_card_le_seventeen` |
+| Four-selected-edge root bounds at thresholds twenty-one, twenty-two, and twenty-three | [SmallTypes.lean](StrongEdge19/SmallTypes.lean), [High22Root.lean](StrongEdge19/High22Root.lean), [High23Root.lean](StrongEdge19/High23Root.lean) | `high21_clique_card_le_sixteen_of_root_four`, `high22_clique_card_le_fifteen_of_root_four`, `high23_clique_card_le_thirteen_of_root_four` |
+| Closed high-degree private centres with selected maximum degree three have private size at most thirteen | [PrivateSubcubic.lean](StrongEdge19/PrivateSubcubic.lean) | `private_subcubic_card_le_thirteen` |
+| Exclusion of all remaining critical degrees | [CriticalHighDegree.lean](StrongEdge19/CriticalHighDegree.lean), [PositiveDeficits.lean](StrongEdge19/PositiveDeficits.lean) | `zero_deficit_impossible` |
+| Positive deficits and the global compensation inequality | [PositiveDeficits.lean](StrongEdge19/PositiveDeficits.lean) | `deficit_pos_of_no_twenty_clique`, `global_compensation_of_no_twenty_clique` |
+| Unconditional corrected nineteen packing and the independence-number form | [Main.lean](StrongEdge19/Main.lean) | `induced_matching_packing19_with_connected_component_count`, `prescribed_edge_bound19` |
 
 All names above have the prefix `StrongEdge19.`. [StrongEdge19.lean](StrongEdge19.lean) imports the checked mathematical development. [Audit.lean](StrongEdge19/Audit.lean) prints representative theorem types and the axioms of every new declaration.
 
@@ -42,14 +55,10 @@ For development only, `build-lean.ps1` accepts `-Module StrongEdge19.ModuleName`
 
 The local `lakefile.toml` also declares the extension's path dependency on the fixed upstream package. The recorded build uses the script above so that no second dependency download or modification of the fixed package is needed.
 
-## Remaining obligations for the full nineteen theorem
+## Scope of the completed proof
 
-The paper proof's Stage 2 supplies the following arguments, which are still pending in Lean:
+The full theorem has no remaining formal proof obligations. The stronger pointwise deficit statement applies to tertiary-optimal maximum independent sets after fully selected twenty-cliques are excluded. The final cardinality bound is expressed using the independence number, so it is independent of which maximum independent set represents that number.
 
-1. Improve the all-high20 clique bound from eighteen to seventeen.
-2. At a four-selected-edge root, prove the high21, high22, and high23 bounds sixteen, fifteen, and thirteen.
-3. Prove that a closed private centre of full degree at least twenty-one has private size at most thirteen when the private selected maximum degree is at most three.
-4. Use these facts to exclude the remaining critical centre degrees twenty through twenty-three. The checked endpoint `zero_deficit_remaining_degree_range` states exactly this remaining range when selected twenty-cliques have been excluded.
-5. Obtain positive deficits, apply the checked compensation theorem, and restore the wholly selected exceptional components with the exact original correction term.
+The threshold twenty-one through twenty-three improvements listed above explicitly require a four-selected-edge root. The proof supplies that root for a large critical private clique using the separate closed-centre lemma; it does not assert those improvements for every abstract clique.
 
-No theorem asserting the unconditional corrected nineteen bound is present in this extension yet. See the [formalization checkpoint note](../notes/lean-formalization-progress.md) for the proof adaptation used for rigidity.
+The proof does not rely on the finite template checkers. The historical Stage 2 exchange analyses for small matching number and the explicit sharpness example are not separately formalized here. The universal main theorem already excludes the proposed 39-candidate, matching-number-two obstruction; `candidate_card_le_thirty_eight_of_indepNum_le_two` records this corollary. See the [formalization record](../notes/lean-formalization-progress.md) for adaptations of the paper proof.

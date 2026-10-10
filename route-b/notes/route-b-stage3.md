@@ -2,11 +2,11 @@
 
 Date: 11 October 2026 (Australia/Sydney).
 
-**Status: full packing theorem on paper; core rigidity theorem now Lean-verified.** Theorem 1.2 is formalized in the [new Lean extension](../lean/README.md), together with its application to a degree-nineteen zero-deficit centre. Theorem 1.1 still depends on the new Stage 2 lemmas that remain to be formalized. Neither the historical upstream build nor the finite checks certify those remaining arguments. The pinned upstream source is unchanged.
+**Status: the full corrected packing theorem and the core rigidity theorem are now Lean-verified.** The [new Lean extension](../lean/README.md) proves Theorems 1.1 and 1.2, including the required Stage 2 structural improvements, all critical-degree exclusions, compensation, and the literal original connected-component correction. Its [build and axiom audit](../verification/lean-extension/README.md) is separate from the historical upstream build and the finite checks. The pinned upstream source is unchanged.
 
 ## 1. Result and proof dependencies
 
-> **Theorem 1.1 (paper).** For every finite simple graph `G` of maximum degree at most four and every candidate set `F subset E(G)`,
+> **Theorem 1.1 (now also Lean-verified).** For every finite simple graph `G` of maximum degree at most four and every candidate set `F subset E(G)`,
 >
 > `|F| <= 19 nu_s^G(F) + t_G(F)`.
 
@@ -25,7 +25,7 @@ Here is the dependency chain for Theorem 1.1:
 3. [Stage 2](route-b-stage2.md), Sections 3-6, proves on paper that every tertiary-optimal zero-deficit centre has `d(e)=c(e)=19`, private size nineteen, and its full closed conflict neighbourhood contained in `F`.
 4. Sections 2-5 below prove Theorem 1.2. Section 6 excludes every such zero-deficit centre and proves the compensation inequality for arbitrary matching number.
 
-The general theorem therefore depends on new paper arguments from **both** Stages 2 and 3. It is not a theorem already certified by the upstream Lean development.
+The general theorem depends on new arguments from **both** Stages 2 and 3. They are certified by the independent extension, which imports the unchanged upstream Lean development.
 
 ## 2. Root notation and a stronger triangle obstruction
 
@@ -244,18 +244,18 @@ This proves Theorem 1.1 on paper. The general global compensation problem resolv
 - A proper nineteen-edge selection in an original `C5[2]` component has matching number one, correction zero, and equality in the new bound. Its candidate centre degree is eighteen, private size nineteen, and deficit one, consistent with (6.2).
 - Before exceptional-component removal, a fully selected `C5[2]` has deficit minus one. The unreduced compensation form remains `sum delta + R >= |M|-2t`, as in Stage 1; (6.2) is asserted only after reduction.
 
-## 7. Checks, limitations, and next executable work
+## 7. Finite checks and completed formalization
 
 The [Stage 3 checker](../scripts/check_stage3.py) enumerates labelled root templates for the two saturated type families in this proof: one quadruple with four doubles, and two triples with three doubles. It retains every original core edge, including edges outside the candidates, and completes unused original degree slots with fresh branches. It checks nineteen-edge candidate cliques, full degrees, and the actual doubled-cycle component conclusion. It also checks the residual deficit in doubled-cycle boundary examples. See the [saved results](../results/stage3-checks.json) for exact scope, counts, source hashes, and outcomes.
 
-These checks support specific proof steps. They are not an exhaustive search over all original graphs, and they are not a formal proof of Theorem 1.2 or Theorem 1.1. In particular, the paper arguments excluding low-incidence triple cases and establishing Stage 2's new local bounds remain mathematical proof obligations for independent review and formalization.
+These checks support specific proof steps. They are not an exhaustive search over all original graphs or a formal proof of either theorem. The independent Lean extension now supplies the universal formal proofs, without using the finite checkers as proof certificates.
 
-The next executable work is a proof audit followed by additive Lean formalization in this research repository:
+The completed formalization covers:
 
-1. Formalize Lemma 2.1, including the injection from external doubles at a triangle label into internal cover edges.
-2. Formalize the quadruple case as an exact original-neighbour component certificate; preserve its potentially unselected twentieth edge.
-3. Formalize the two-triple case, including type-load exclusion of a third triple, nesting under selected saturation, and the incompatible endpoint edges of the outer five-vertex path.
-4. Formalize the new Stage 2 bounds needed by Corollary 6.2 and its private-root lemma. The existing Stage 2 `k=2` and `k=3` exchange exclusions are not needed for the final theorem.
-5. Combine these lemmas with private exchange, tertiary optimization, the exact identity, and exceptional-component removal. Audit dependencies and axioms of the new endpoint separately from the preserved 19.5 endpoint.
+1. Independent root neighbourhoods, original type loads, and the triple-type exclusions.
+2. A closed original support on at most ten vertices and completion of a high19 nineteen-clique to a twenty-clique. Upstream rigidity supplies its component certificate; the potentially unselected twentieth edge is preserved.
+3. The stronger Stage 2 root bounds, the unconditional high20 seventeen-clique bound, and the closed private-centre lemma.
+4. Exclusion of all zero-deficit centres under tertiary optimization after fully selected twenty-cliques are removed.
+5. Exact compensation, the corrected matching-witness theorem, and the independence-number statement with the literal original connected-component count.
 
-Until those tasks are complete, the correct status is **a complete paper proof awaiting independent verification and Lean formalization**, with no new kernel-certified 19 theorem claimed.
+See the [formalization record](lean-formalization-progress.md) for proof adaptations and exact scope. The older Stage 2 `k=2` and `k=3` exchange exclusions are not dependencies of the final formal theorem. The explicit sharpness construction has not been separately formalized.
