@@ -2,6 +2,8 @@
 
 Date: 11 October 2026 (Australia/Sydney).
 
+For the consolidated proof matching the optimized Lean source, see the [complete English manuscript](../manuscript/packing19.md). It uses the candidate-degree-only Stage 2 interface and the closed-support completion argument. This note preserves the earlier direct component-classification route.
+
 **Status: the full corrected packing theorem and the core rigidity theorem are now Lean-verified.** The [new Lean extension](../lean/README.md) proves Theorems 1.1 and 1.2, including the required Stage 2 structural improvements, all critical-degree exclusions, compensation, and the literal original connected-component correction. Its [build and axiom audit](../verification/lean-extension/README.md) is separate from the historical upstream build and the finite checks. The pinned upstream source is unchanged.
 
 ## 1. Result and proof dependencies

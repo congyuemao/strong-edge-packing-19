@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-10T19:48:22.654647+00:00",
+  "mathematical_source_commit": "2c20ac6099a0fb581367e3bee39465aafec5f879",
+  "upstream_commit": "2e91b05b25a4ee931a0490fefcdbb4f253be95c8",
+  "manuscript_sha256": "e3a0a00ed88df6a1ad64cddcc23b929830189f1eb426a84fcb5a1db239f67f4e",
+  "validator_sha256": "920d6202473a06236048056feaa39044a81c625efe3df814abc7e4ae1b612720",
+  "verified_source_hashes_unchanged": 33,
+  "existing_lean_files_in_audit": 29,
+  "existing_axiom_audits": 83,
+  "mapped_extension_modules": 27,
+  "mapped_extension_declarations": 83,
+  "upstream_declaration_references_checked": 16,
+  "numbered_paper_statements": 30,
+  "numbered_equations": 17,
+  "manuscript_lines": 730,
+  "maintained_files_scanned": 81,
+  "broken_local_links": [],
+  "cjk_findings": [],
+  "scope": "Documentation references, English-text scan, math delimiter balance, and source provenance. Not verification of the English proof or a new Lean build."
+}

@@ -10,6 +10,8 @@ This repository proves the prescribed-edge bound
 
 All strong conflicts are evaluated in the complete original graph `G`. Original edges outside `F` remain available as conflict witnesses. The correction `t_G(F)` counts only original `C5[2]` components whose entire twenty-edge sets belong to `F`.
 
+Read the [complete English proof aligned with the optimized Lean development](route-b/manuscript/packing19.md). It presents the structural lemmas, the candidate-degree-only Stage 2 interface, nineteen-clique completion, exact compensation, and component restoration, with a concordance covering all 83 extension declarations.
+
 ## Research routes
 
 - [Route B: global compensation and critical configurations](route-b/README.md)

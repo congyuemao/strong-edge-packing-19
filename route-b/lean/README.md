@@ -11,6 +11,8 @@ F.card ≤ 19 * ((conflictGraph G).induce (F : Set G.edgeSet)).indepNum +
 
 Its only graph hypothesis is `∀ x, G.degree x ≤ 4`, in a finite simple graph. All conflicts use `G`, including unselected original edges. The upstream component certificate and connected-component count supply exactly the specified correction. The module also provides an induced-matching witness and the zero-correction specialization.
 
+The [complete English manuscript](../manuscript/packing19.md) follows the optimized proof and maps all 83 extension declarations to the corresponding paper arguments.
+
 ## Checked results
 
 | Result | Source | Principal declaration |

@@ -2,6 +2,8 @@
 
 Date: 11 October 2026 (Australia/Sydney).
 
+The [complete English manuscript](../manuscript/packing19.md) now follows the optimized Lean proof, including all intermediate structural arguments and a concordance for all 83 extension declarations.
+
 The [independent Lean extension](../lean/README.md) now proves the unconditional corrected nineteen bound, with the literal original connected-component correction. It checks the Stage 1 identity and normalization, the required Stage 2 structural improvements, Stage 3 nineteen-clique rigidity, all critical-degree exclusions, and the final packing argument. The upstream 19.5 source is unchanged.
 
 The verified normalization has no assumption that the original neighbourhood is already selected. It first finds a private witness at the next threshold, then uses the tertiary exchange to prove equality of full and candidate centre degrees. Equality of the nested finite neighbourhoods then proves full-neighbourhood closure.
