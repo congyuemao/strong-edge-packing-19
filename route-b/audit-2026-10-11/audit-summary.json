@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-10T20:21:22.664316+00:00",
+  "repository_commit": "028f4d3541ad41a558b3d1f5c8fd962046ea24dd",
+  "upstream_commit": "2e91b05b25a4ee931a0490fefcdbb4f253be95c8",
+  "project_modules_recompiled": 104,
+  "project_source_lines": 13392,
+  "compiler_seconds": 1032.984,
+  "elaborated_project_declarations_checked": 1521,
+  "elaborated_extension_declarations_checked": 327,
+  "transitive_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "source_placeholders_or_escape_tokens": [],
+  "tracked_repository_and_upstream_files_unchanged": true,
+  "finite_regressions_reproduced": true,
+  "library_cache_reused": true,
+  "conclusion": "No substantiated main-theorem proof error, circularity, harmful specification mismatch or additional mathematical axiom found within the documented scope.",
+  "report": "REPORT.md",
+  "evidence": [
+    "source-scan.json",
+    "clean-build-results.json",
+    "environment-audit.json",
+    "toolchain-provenance.json",
+    "finite-regressions.json",
+    "manuscript-provenance.json"
+  ]
+}

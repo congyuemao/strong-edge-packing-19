@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "official_metadata_url": "https://api.github.com/repos/leanprover/lean4/releases/tags/v4.35.0-rc4",
+  "release_url": "https://github.com/leanprover/lean4/releases/tag/v4.35.0-rc4",
+  "asset_url": "https://github.com/leanprover/lean4/releases/download/v4.35.0-rc4/lean-4.35.0-rc4-windows.zip",
+  "official_sha256": "sha256:fef75506e6af6c3669efc360224410865b3d292240aafc351a312435972667f3",
+  "archive_sha256": "sha256:fef75506e6af6c3669efc360224410865b3d292240aafc351a312435972667f3",
+  "installed_bin_and_lib_files_compared": 15337
+}

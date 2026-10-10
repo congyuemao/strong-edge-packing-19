@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "historical_results_exactly_reproduced": true,
+  "stage2_templates": 72,
+  "stage2_examples": 4,
+  "stage3_triangle_roots": 600,
+  "stage3_family_counts": {
+    "type_multisets": 28,
+    "original_core_graphs": 1082,
+    "candidate_sets": 3662,
+    "nineteen_cliques": 48,
+    "high_nineteen_cliques": 48
+  },
+  "stage3_compensation_examples": 6
+}

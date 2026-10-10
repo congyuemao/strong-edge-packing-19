@@ -18,6 +18,7 @@ The optimized proof and its complete English manuscript are merged into the defa
 
 ## Research routes
 
+- [Independent audit report and reproducible evidence for commit 028f4d3](route-b/audit-2026-10-11/README.md)
 - [Route B: global compensation and critical configurations](route-b/README.md)
 - [Stage 1: the exact identity and critical normalization](route-b/notes/route-b-stage1.md)
 - [Stage 2: a paper exclusion of all five 39-edge cases](route-b/notes/route-b-stage2.md)
