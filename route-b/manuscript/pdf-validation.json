@@ -1,0 +1,141 @@
+{
+  "status": "passed",
+  "pdf_sha256": "d6821a6dbaf5809b9381efc15e44a7beca94e1b9f715ba1cbf4398a25de847d8",
+  "manuscript_sha256": "4737a16dbdcc3b100847f46374e16658b6be78e2fc324247d4ab62c33d51d492",
+  "validator_sha256": "99cb7858e6339feca64781cbd61eb4382e133b26a15d2b4621ccb43ab1347353",
+  "pages": 19,
+  "numbered_statements_found": 30,
+  "equation_tags_found": 17,
+  "source_display_equations_accounted_for_by_builder": 41,
+  "extension_declarations_found": 83,
+  "proof_prose_fragments_found": 257,
+  "external_links": 50,
+  "raster_images": 0,
+  "embedded_text_fonts": [
+    "AAAAAA+STIXGeneral-Bold",
+    "AAAAAA+STIXGeneral-Italic",
+    "AAAAAA+STIXGeneral-Regular",
+    "AAAAAA+STIXNonUnicode-Italic",
+    "AAAAAA+STIXSizeTwoSym-Regular",
+    "AAAAAA+TimesNewRomanPS-BoldMT",
+    "AAAAAA+TimesNewRomanPS-ItalicMT",
+    "AAAAAA+TimesNewRomanPSMT"
+  ],
+  "page_checks": [
+    {
+      "page": 1,
+      "characters": 2823,
+      "bounds_check": "passed",
+      "page_number": "1"
+    },
+    {
+      "page": 2,
+      "characters": 2544,
+      "bounds_check": "passed",
+      "page_number": "2"
+    },
+    {
+      "page": 3,
+      "characters": 1915,
+      "bounds_check": "passed",
+      "page_number": "3"
+    },
+    {
+      "page": 4,
+      "characters": 1982,
+      "bounds_check": "passed",
+      "page_number": "4"
+    },
+    {
+      "page": 5,
+      "characters": 2250,
+      "bounds_check": "passed",
+      "page_number": "5"
+    },
+    {
+      "page": 6,
+      "characters": 3480,
+      "bounds_check": "passed",
+      "page_number": "6"
+    },
+    {
+      "page": 7,
+      "characters": 3569,
+      "bounds_check": "passed",
+      "page_number": "7"
+    },
+    {
+      "page": 8,
+      "characters": 3343,
+      "bounds_check": "passed",
+      "page_number": "8"
+    },
+    {
+      "page": 9,
+      "characters": 2910,
+      "bounds_check": "passed",
+      "page_number": "9"
+    },
+    {
+      "page": 10,
+      "characters": 3659,
+      "bounds_check": "passed",
+      "page_number": "10"
+    },
+    {
+      "page": 11,
+      "characters": 2800,
+      "bounds_check": "passed",
+      "page_number": "11"
+    },
+    {
+      "page": 12,
+      "characters": 3133,
+      "bounds_check": "passed",
+      "page_number": "12"
+    },
+    {
+      "page": 13,
+      "characters": 2385,
+      "bounds_check": "passed",
+      "page_number": "13"
+    },
+    {
+      "page": 14,
+      "characters": 1878,
+      "bounds_check": "passed",
+      "page_number": "14"
+    },
+    {
+      "page": 15,
+      "characters": 2975,
+      "bounds_check": "passed",
+      "page_number": "15"
+    },
+    {
+      "page": 16,
+      "characters": 2255,
+      "bounds_check": "passed",
+      "page_number": "16"
+    },
+    {
+      "page": 17,
+      "characters": 2377,
+      "bounds_check": "passed",
+      "page_number": "17"
+    },
+    {
+      "page": 18,
+      "characters": 2868,
+      "bounds_check": "passed",
+      "page_number": "18"
+    },
+    {
+      "page": 19,
+      "characters": 2588,
+      "bounds_check": "passed",
+      "page_number": "19"
+    }
+  ],
+  "scope": "PDF content, provenance, metadata, embedded font use, links, and text bounds. Visual review is recorded separately. Not a Lean build or verification of English mathematics."
+}

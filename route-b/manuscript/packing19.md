@@ -1,5 +1,9 @@
 # A Corrected Nineteen Bound for Induced Matchings in Prescribed Edge Sets
 
+*A complete proof manuscript with a correspondence to the verified Lean development*
+
+**Author:** Congyue Mao
+
 **Proof version:** aligned with the optimized `StrongEdge19` development at commit `2c20ac6099a0fb581367e3bee39465aafec5f879`.
 
 **Date:** 11 October 2026.
@@ -15,6 +19,8 @@ $$
 The constant nineteen is sharp. The proof refines the private-neighbourhood argument for the verified corrected 19.5 bound. A tertiary-optimal maximum independent set in the candidate conflict graph has positive integer deficit at every centre once wholly selected twenty-cliques have been excluded. The critical-degree analysis exports only candidate degree nineteen. A separate rigidity theorem extends a nineteen-edge strong clique of full conflict degree at least nineteen to an original twenty-clique; this recovers the neighbourhood closure needed for the final contradiction. An exact incidence identity gives the packing bound, and induction restores the exceptional components.
 
 This manuscript presents the complete nineteen-bound argument in the order used by the optimized formalization. The established structural results from the pinned 19.5 project are stated explicitly in Section 2, with their proofs available in the cited foundation. All subsequent structural improvements and their use in the packing argument are proved here. The historical small-matching-number investigations are not prerequisites. Appendix A identifies the corresponding Lean declarations.
+
+**Keywords.** Induced matching; prescribed edge set; square of a line graph; doubled five-cycle; private neighbourhood; formal verification.
 
 **Contents:** [Statement](#1-statement-and-conventions) · [Foundation](#2-the-verified-foundation-and-elementary-cover-identities) · [Compensation and normalization](#3-exact-compensation-and-critical-normalization) · [Root tools](#4-root-counting-tools) · [Stage 2](#5-stage-2-the-candidate-degree-interface) · [Stage 3](#6-stage-3-nineteen-clique-rigidity-through-a-closed-support) · [Positive deficits](#7-eliminating-zero-deficit-and-proving-compensation) · [Correction and sharpness](#8-restoring-exceptional-components-and-sharpness) · [Lean concordance](#appendix-a-correspondence-with-the-lean-development) · [Verification scope](#appendix-b-verification-status-and-scope).
 
@@ -58,7 +64,7 @@ We first establish the bound when no twenty-edge strong clique is wholly selecte
 
 A **strong clique** is a set $Q\subseteq E(G)$ of pairwise conflicting edges. Put $q=|Q|$, and let $d_Q(v)$ count its edges incident with the original vertex $v$. Original degree $d_G(v)$, selected degree $d_Q(v)$, full conflict degree $c(e)$, and candidate conflict degree $d(e)$ will always be distinguished.
 
-We use the following results of the [pinned 19.5 development](../../upstream/packing195/manuscript/packing195.md), at commit `2e91b05b25a4ee931a0490fefcdbb4f253be95c8`.
+We use the following results of the [pinned 19.5 development](../../upstream/packing195/manuscript/packing195.md) [1], at commit `2e91b05b25a4ee931a0490fefcdbb4f253be95c8`.
 
 **Foundation 2.1 (full-degree thresholds).** If every edge of a strong clique $Q$ has full conflict degree at least $h$, then
 
@@ -719,7 +725,7 @@ In the small-type branch of Lemma 6.3, Lean invokes the upstream `clique_card_le
 
 ## Appendix B. Verification status and scope
 
-The optimized mathematical source was compiled with Lean `4.35.0-rc4`. Its [recorded verification](../verification/interface-refactor/candidate/results.json) covers 29 Lean files and audits all 83 new declarations. The [raw compiler output](../verification/interface-refactor/candidate/build-and-audit.log) records only the permitted axioms `propext`, `Classical.choice`, and `Quot.sound`. No additional mathematical axiom, proof placeholder, or hidden graph hypothesis is introduced.
+The optimized mathematical source [2] was compiled with Lean `4.35.0-rc4`. Its [recorded verification](../verification/interface-refactor/candidate/results.json) covers 29 Lean files and audits all 83 new declarations. The [raw compiler output](../verification/interface-refactor/candidate/build-and-audit.log) records only the permitted axioms `propext`, `Classical.choice`, and `Quot.sound`. No additional mathematical axiom, proof placeholder, or hidden graph hypothesis is introduced.
 
 This manuscript changes no Lean source, original conflict definition, induced-matching definition, or correction definition. Its correspondence check compares the mathematical source hashes with that existing verified record and checks the cited declarations. This is documentation validation, not a new compilation and not machine verification of the English prose. The individual foundational results remain the unchanged theorems of the pinned 19.5 project.
 
@@ -728,3 +734,13 @@ The [Stage 2](../results/stage2-checks.json) and [Stage 3](../results/stage3-che
 For build reproduction, see the [Lean extension guide](../lean/README.md). For the measured difference between the preserved original implementation and the optimized interface, see the [interface review](../notes/candidate-degree-interface-review.md). Earlier Stage 1–3 notes record the research history; this manuscript is the consolidated proof matching the optimized source.
 
 The [documentation validation record](validation.json) is reproduced from the repository root with `python route-b/scripts/check-manuscript.py`. It checks the complete 83-declaration concordance, statement references, local links, math delimiters, English-text consistency, and unchanged audited source hashes.
+
+## AI assistance and verification
+
+This research was conducted predominantly using generative AI systems, including mathematical exploration, proof development, Lean formalization, and manuscript preparation. OpenAI generative AI systems, including Codex, were used for this work under the direction of **Congyue Mao**. The formal proof terms were checked by the Lean kernel, with the verification record described in Appendix B. This kernel verification applies to the formal development; the English exposition and PDF typesetting were reviewed separately.
+
+## References
+
+[1] C. Mao, *A Corrected 19.5 Bound for Induced Matchings in Prescribed Edge Sets*. Proof manuscript and verified Lean development, 10 October 2026. [Source and manuscript](https://github.com/congyuemao/strong-edge-packing-195/tree/2e91b05b25a4ee931a0490fefcdbb4f253be95c8). Pinned foundation: `2e91b05b25a4ee931a0490fefcdbb4f253be95c8`.
+
+[2] C. Mao, *StrongEdge19: Corrected Nineteen Packing in Prescribed Edge Sets*. Lean source and verification archive, 11 October 2026. [Optimized mathematical source](https://github.com/congyuemao/strong-edge-packing-19/tree/2c20ac6099a0fb581367e3bee39465aafec5f879). This manuscript follows that audited mathematical source; subsequent commits add exposition and publishing files.

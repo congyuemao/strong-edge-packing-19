@@ -12,6 +12,8 @@ All strong conflicts are evaluated in the complete original graph `G`. Original 
 
 Read the [complete English proof aligned with the optimized Lean development](route-b/manuscript/packing19.md). It presents the structural lemmas, the candidate-degree-only Stage 2 interface, nineteen-clique completion, exact compensation, and component restoration, with a concordance covering all 83 extension declarations.
 
+The [complete English PDF manuscript](route-b/manuscript/packing19.pdf) follows the companion 19.5 paper's format, including Congyue Mao's byline and a separate AI-assistance disclosure. [Publishing source and reproduction instructions](route-b/manuscript/README.md) accompany the PDF.
+
 The optimized proof and its complete English manuscript are merged into the default branch, `codex/route-b-stage1`. The original verified 19 implementation remains available at tag `strongedge19-verified-original` (commit `cbc6f7b50f5defb2e03e9291dc3ccac2ff0e7abc`). Both implementations and their verification records remain in the repository history.
 
 ## Research routes

@@ -2,7 +2,7 @@
 
 This directory contains Route B derivations, programs, and verification records. The existing 19.5 proof is shared through the pinned `upstream/packing195` submodule at the repository root.
 
-The [complete English manuscript](manuscript/packing19.md) is the consolidated proof matching the optimized Lean implementation. The Stage 1–3 notes below preserve the earlier research sequence.
+The [complete English manuscript](manuscript/packing19.md) is the consolidated proof matching the optimized Lean implementation. A [typeset PDF](manuscript/packing19.pdf) and [publishing instructions](manuscript/README.md) accompany it. The Stage 1–3 notes below preserve the earlier research sequence.
 
 - [Stage 1: exact compensation and critical normalization](notes/route-b-stage1.md)
 - [Stage 1 upstream Lean verification](verification/README.md)
