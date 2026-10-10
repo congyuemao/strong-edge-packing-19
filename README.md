@@ -10,6 +10,10 @@ This repository proves the prescribed-edge bound
 
 All strong conflicts are evaluated in the complete original graph `G`. Original edges outside `F` remain available as conflict witnesses. The correction `t_G(F)` counts only original `C5[2]` components whose entire twenty-edge sets belong to `F`.
 
+Read the [complete English proof aligned with the optimized Lean development](route-b/manuscript/packing19.md). It presents the structural lemmas, the candidate-degree-only Stage 2 interface, nineteen-clique completion, exact compensation, and component restoration, with a concordance covering all 83 extension declarations.
+
+The optimized proof and its complete English manuscript are merged into the default branch, `codex/route-b-stage1`. The original verified 19 implementation remains available at tag `strongedge19-verified-original` (commit `cbc6f7b50f5defb2e03e9291dc3ccac2ff0e7abc`). Both implementations and their verification records remain in the repository history.
+
 ## Research routes
 
 - [Route B: global compensation and critical configurations](route-b/README.md)
@@ -19,6 +23,7 @@ All strong conflicts are evaluated in the complete original graph `G`. Original 
 - [Stage 3 finite template checks](route-b/results/stage3-checks.json)
 - [New Lean extension and exact formalization scope](route-b/lean/README.md)
 - [New Lean verification and axiom audit](route-b/verification/lean-extension/README.md)
+- [Stage 2 interface review and before/after measurements](route-b/notes/candidate-degree-interface-review.md)
 - [Verification scope and reproduction](route-b/verification/README.md)
 - [Recorded upstream verification results](route-b/verification/results.json)
 

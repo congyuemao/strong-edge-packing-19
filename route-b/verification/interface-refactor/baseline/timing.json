@@ -1,0 +1,128 @@
+{
+  "label": "baseline",
+  "source_commit": "cbc6f7b50f5defb2e03e9291dc3ccac2ff0e7abc",
+  "elapsed_seconds": 344.873673,
+  "measurement": "One full extension rebuild and all-declaration audit; cached upstream and mathlib reused; no concurrent Lean build.",
+  "events": [
+    {
+      "elapsed_seconds": 0.3658716,
+      "output": "Checking StrongEdge19.Tertiary"
+    },
+    {
+      "elapsed_seconds": 11.4010126,
+      "output": "Checking StrongEdge19.Compensation"
+    },
+    {
+      "elapsed_seconds": 23.0256811,
+      "output": "Checking StrongEdge19.Root19"
+    },
+    {
+      "elapsed_seconds": 32.3643222,
+      "output": "Checking StrongEdge19.RootLoad"
+    },
+    {
+      "elapsed_seconds": 45.2619362,
+      "output": "Checking StrongEdge19.RootSaturation"
+    },
+    {
+      "elapsed_seconds": 57.8315392,
+      "output": "Checking StrongEdge19.OuterSupport"
+    },
+    {
+      "elapsed_seconds": 70.858694,
+      "output": "Checking StrongEdge19.QuadType"
+    },
+    {
+      "elapsed_seconds": 82.5602774,
+      "output": "Checking StrongEdge19.QuadLoad"
+    },
+    {
+      "elapsed_seconds": 91.8590396,
+      "output": "Checking StrongEdge19.BipartiteSupport"
+    },
+    {
+      "elapsed_seconds": 104.9844371,
+      "output": "Checking StrongEdge19.QuadCore"
+    },
+    {
+      "elapsed_seconds": 118.1479524,
+      "output": "Checking StrongEdge19.ClosedCore"
+    },
+    {
+      "elapsed_seconds": 133.3707105,
+      "output": "Checking StrongEdge19.NineteenRigidity"
+    },
+    {
+      "elapsed_seconds": 142.5025584,
+      "output": "Checking StrongEdge19.CriticalNormalization"
+    },
+    {
+      "elapsed_seconds": 155.6372376,
+      "output": "Checking StrongEdge19.CriticalNineteen"
+    },
+    {
+      "elapsed_seconds": 167.2203692,
+      "output": "Checking StrongEdge19.EndpointConflict"
+    },
+    {
+      "elapsed_seconds": 177.0719243,
+      "output": "Checking StrongEdge19.PrivateSubcubic"
+    },
+    {
+      "elapsed_seconds": 190.4866336,
+      "output": "Checking StrongEdge19.SmallTypes"
+    },
+    {
+      "elapsed_seconds": 203.6984164,
+      "output": "Checking StrongEdge19.TypeCover"
+    },
+    {
+      "elapsed_seconds": 215.122799,
+      "output": "Checking StrongEdge19.High22Root"
+    },
+    {
+      "elapsed_seconds": 226.4526107,
+      "output": "Checking StrongEdge19.High23Root"
+    },
+    {
+      "elapsed_seconds": 237.4345388,
+      "output": "Checking StrongEdge19.CriticalHighDegree"
+    },
+    {
+      "elapsed_seconds": 249.3132407,
+      "output": "Checking StrongEdge19.OuterSaturation"
+    },
+    {
+      "elapsed_seconds": 261.2524873,
+      "output": "Checking StrongEdge19.High20Triple"
+    },
+    {
+      "elapsed_seconds": 273.5943422,
+      "output": "Checking StrongEdge19.High20Root"
+    },
+    {
+      "elapsed_seconds": 285.5268032,
+      "output": "Checking StrongEdge19.PositiveDeficits"
+    },
+    {
+      "elapsed_seconds": 297.5985777,
+      "output": "Checking StrongEdge19.Packing"
+    },
+    {
+      "elapsed_seconds": 309.1627166,
+      "output": "Checking StrongEdge19.Main"
+    },
+    {
+      "elapsed_seconds": 320.6202415,
+      "output": "Checking StrongEdge19"
+    },
+    {
+      "elapsed_seconds": 331.7161532,
+      "output": "Checking StrongEdge19.Audit"
+    },
+    {
+      "elapsed_seconds": 344.8713545,
+      "output": "PASS: 29 Lean files; 84 declaration audits; no additional axioms."
+    }
+  ]
+}

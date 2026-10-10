@@ -1,0 +1,8 @@
+'StrongEdge19.induced_matching_packing19_unconditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.induced_matching_packing19_with_connected_component_count' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StrongEdge19.prescribed_edge_bound19' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.induced_matching_packing19_of_no_full_tight_component' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

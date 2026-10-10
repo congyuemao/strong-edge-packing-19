@@ -11,6 +11,8 @@ F.card ≤ 19 * ((conflictGraph G).induce (F : Set G.edgeSet)).indepNum +
 
 Its only graph hypothesis is `∀ x, G.degree x ≤ 4`, in a finite simple graph. All conflicts use `G`, including unselected original edges. The upstream component certificate and connected-component count supply exactly the specified correction. The module also provides an induced-matching witness and the zero-correction specialization.
 
+The [complete English manuscript](../manuscript/packing19.md) follows the optimized proof and maps all 83 extension declarations to the corresponding paper arguments.
+
 ## Checked results
 
 | Result | Source | Principal declaration |
@@ -29,13 +31,16 @@ Its only graph hypothesis is `∀ x, G.degree x ≤ 4`, in a finite simple graph
 | Full-degree-at-least-twenty strong cliques have at most seventeen edges | [High20Root.lean](StrongEdge19/High20Root.lean) | `high20_clique_card_le_seventeen` |
 | Four-selected-edge root bounds at thresholds twenty-one, twenty-two, and twenty-three | [SmallTypes.lean](StrongEdge19/SmallTypes.lean), [High22Root.lean](StrongEdge19/High22Root.lean), [High23Root.lean](StrongEdge19/High23Root.lean) | `high21_clique_card_le_sixteen_of_root_four`, `high22_clique_card_le_fifteen_of_root_four`, `high23_clique_card_le_thirteen_of_root_four` |
 | Closed high-degree private centres with selected maximum degree three have private size at most thirteen | [PrivateSubcubic.lean](StrongEdge19/PrivateSubcubic.lean) | `private_subcubic_card_le_thirteen` |
-| Exclusion of all remaining critical degrees | [CriticalHighDegree.lean](StrongEdge19/CriticalHighDegree.lean), [PositiveDeficits.lean](StrongEdge19/PositiveDeficits.lean) | `zero_deficit_impossible` |
+| Stage 2 candidate-degree interface for zero deficit | [CriticalHighDegree.lean](StrongEdge19/CriticalHighDegree.lean) | `zero_deficit_candidate_degree_eq_nineteen` |
+| Elimination of zero deficit using Stage 3 rigidity | [PositiveDeficits.lean](StrongEdge19/PositiveDeficits.lean) | `zero_deficit_impossible` |
 | Positive deficits and the global compensation inequality | [PositiveDeficits.lean](StrongEdge19/PositiveDeficits.lean) | `deficit_pos_of_no_twenty_clique`, `global_compensation_of_no_twenty_clique` |
 | Unconditional corrected nineteen packing and the independence-number form | [Main.lean](StrongEdge19/Main.lean) | `induced_matching_packing19_with_connected_component_count`, `prescribed_edge_bound19` |
 
 All names above have the prefix `StrongEdge19.`. [StrongEdge19.lean](StrongEdge19.lean) imports the checked mathematical development. [Audit.lean](StrongEdge19/Audit.lean) prints representative theorem types and the axioms of every new declaration.
 
-The rigidity theorem assumes that all nineteen clique members have **full original conflict degree** at least nineteen. It does not omit this hypothesis or replace full degrees with selected degrees. The extended twentieth edge need not have belonged to the candidate set. Candidate membership is derived separately using the normalized centre's closed full neighbourhood.
+The rigidity theorem assumes that all nineteen clique members have **full original conflict degree** at least nineteen. It does not omit this hypothesis or replace full degrees with selected degrees. The extended twentieth edge need not have belonged to the candidate set. In the degree-nineteen branch, twenty-clique closure gives full centre degree nineteen; equality with the candidate degree then proves that the entire twenty-clique is selected. This branch requires only `IsOptimal`, not tertiary optimality.
+
+Stage 2 exports only the candidate-degree conclusion. Its exclusions at degrees twenty-one through twenty-three still use tertiary normalization and full-neighbourhood closure internally. Stage 2 has no module dependency on Stage 3 rigidity. See the [interface review and measured comparison](../notes/candidate-degree-interface-review.md).
 
 ## Reproduce the recorded verification
 

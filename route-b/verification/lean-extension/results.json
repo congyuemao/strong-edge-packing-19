@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "started_utc": "2026-10-10T18:52:21.5457376+00:00",
-  "finished_utc": "2026-10-10T18:58:01.3864848+00:00",
+  "started_utc": "2026-10-10T19:20:06.7924808+00:00",
+  "finished_utc": "2026-10-10T19:25:51.3932175+00:00",
   "lean_version": "Lean (version 4.35.0-rc4, x86_64-w64-windows-gnu, commit c29b6dda4f7c20e3eeaa717c4e565663c5cfa364, Release)",
   "upstream_commit": "2e91b05b25a4ee931a0490fefcdbb4f253be95c8",
   "upstream_project": "C:\\Users\\21161\\Documents\\ChatGPT\\strong-edge-packing-195\\lean",
@@ -10,8 +10,8 @@
   "build_mode": "All extension modules recompiled; compiled upstream and mathlib dependencies reused.",
   "build_exit_code": 0,
   "lean_source_file_count": 29,
-  "declaration_count": 84,
-  "axiom_audit_count": 84,
+  "declaration_count": 83,
+  "axiom_audit_count": 83,
   "allowed_axioms": [
     "propext",
     "Classical.choice",
@@ -635,6 +635,14 @@
       ]
     },
     {
+      "declaration": "StrongEdge19.zero_deficit_candidate_degree_eq_nineteen",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
       "declaration": "StrongEdge19.zero_deficit_degree_le_twenty",
       "axioms": [
         "propext",
@@ -673,22 +681,6 @@
         "Classical.choice",
         "Quot.sound"
       ]
-    },
-    {
-      "declaration": "StrongEdge19.zero_deficit_remaining_degree_range",
-      "axioms": [
-        "propext",
-        "Classical.choice",
-        "Quot.sound"
-      ]
-    },
-    {
-      "declaration": "StrongEdge19.zero_deficit_remaining_degree_twenty",
-      "axioms": [
-        "propext",
-        "Classical.choice",
-        "Quot.sound"
-      ]
     }
   ],
   "source_hashes": [
@@ -698,7 +690,7 @@
     },
     {
       "path": "lean/StrongEdge19/Audit.lean",
-      "sha256": "950f059c95f88451da65caea7434ed6e2e450f683f12021e672ac3b7dabaed5d"
+      "sha256": "ecdf41b1f32f5886c4ddc379071a684d6f937cd658dca671a6d0ba0bbe5ff41b"
     },
     {
       "path": "lean/StrongEdge19/BipartiteSupport.lean",
@@ -714,15 +706,15 @@
     },
     {
       "path": "lean/StrongEdge19/CriticalHighDegree.lean",
-      "sha256": "841898592d9cd72c20292dbca5790277300c56fed5b8c87f85b1a461c4a9f8e6"
+      "sha256": "816710d51b646dad68d4daa9e3cf90ce5428ac6e4c5e7258ed03c33b7f504113"
     },
     {
       "path": "lean/StrongEdge19/CriticalNineteen.lean",
-      "sha256": "8fea2fdaf7d082420ec94a1731a8e4215456260628f5ea8547b69c01978ecc17"
+      "sha256": "a4cc90c2ce04f8028f6c7c52fb1b4b6dd40c5674ecd5aa36e5540e950c0f55cd"
     },
     {
       "path": "lean/StrongEdge19/CriticalNormalization.lean",
-      "sha256": "1588a509096d26aef218a414a933ea72216ea50b1f875629d99893218b3c1e41"
+      "sha256": "1df56a448264e2e634f6dd615d46406e50225a810a41590fa115b7faaf35ffe9"
     },
     {
       "path": "lean/StrongEdge19/EndpointConflict.lean",
@@ -766,7 +758,7 @@
     },
     {
       "path": "lean/StrongEdge19/PositiveDeficits.lean",
-      "sha256": "8252702d78d73d7e73fa7c6d0ba94c2abc9cfe38c057c5258371876eab2be1a8"
+      "sha256": "9f08e2ef7f1d5f4a67a5d1b8a70bc63f3940f3180518296ff203ff00be870a75"
     },
     {
       "path": "lean/StrongEdge19/PrivateSubcubic.lean",

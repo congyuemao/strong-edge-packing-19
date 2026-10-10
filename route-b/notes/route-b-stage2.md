@@ -2,6 +2,8 @@
 
 Date: 11 October 2026 (Australia/Sydney).
 
+For the consolidated proof matching the optimized Lean source, see the [complete English manuscript](../manuscript/packing19.md). This note retains the Stage 2 research sequence and its small-matching-number arguments.
+
 **Status: paper derivation; the structural improvements needed for the general theorem are now Lean-verified.** The [new extension](../lean/README.md) formalizes the high20 seventeen-clique bound, the high21-high23 root bounds, and the closed private-centre lemma. Its general corrected 19 theorem subsumes the packing conclusions below. The separate small-matching-number exchange arguments are not formalized line by line. The finite checks remain evidence only for their stated templates and boundary examples.
 
 **Subsequent result:** [Stage 3](route-b-stage3.md) resolves the configuration left open at the end of this stage and supplies a general paper proof. The statements of what remained open below describe the Stage 2 boundary.
@@ -202,6 +204,8 @@ The five possible degrees are reduced as follows:
 Thus only degree nineteen remains, with private size nineteen. Its closed candidate neighbourhood has twenty vertices, exactly nineteen of which are private. It has a unique nonprivate neighbour, denoted by `b_e`, with `m(b_e)>=2`.
 
 This is a paper corollary for arbitrary matching number, not a general 19-packing theorem.
+
+**Formal interface update:** the Lean theorem `zero_deficit_candidate_degree_eq_nineteen` exports only `d_H(e)=19`. The private size follows directly from the deficit definition. The normalization conclusions above remain available and are used internally to exclude degrees twenty-one through twenty-three, but Stage 3 no longer receives them as prerequisites: nineteen-clique rigidity recovers full degree and closure for its degree-nineteen case. See the [interface review](candidate-degree-interface-review.md). The following small-matching-number arguments are retained as the historical paper route.
 
 ## 7. The remaining degree-nineteen obstruction
 
