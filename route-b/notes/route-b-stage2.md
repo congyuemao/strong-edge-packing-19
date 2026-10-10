@@ -4,6 +4,8 @@ Date: 11 October 2026 (Australia/Sydney).
 
 **Status: paper proof, not Lean-formalized.** The arguments below use the pinned upstream structural lemmas and the Stage 1 normalization. The accompanying finite checks validate specific obstruction templates and boundary examples; they are not an exhaustive search over original graphs and do not certify this proof in Lean.
 
+**Subsequent result:** [Stage 3](route-b-stage3.md) resolves the configuration left open at the end of this stage and supplies a general paper proof. The statements of what remained open below describe the Stage 2 boundary.
+
 ## 1. Results and their limits
 
 The five Stage 1 rows for `|F|=39`, `alpha(H)=2`, and `t_G(F)=0` can all be excluded on paper. Consequently:
@@ -268,7 +270,7 @@ Counting gives
 
 Thus all three candidate centre degrees equal nineteen. Proposition 5.3 also gives a member `x` of `P_f` with full degree at most nineteen; private degree monotonicity gives `d(x)=c(x)=19`. The same tertiary exchange as in Stage 1 shows that `c(f)=19` too. Therefore all three complete conflict neighbourhoods are contained in `F`.
 
-**Still open in this repository:** realize or exclude this `19,19,18` private-clique configuration in a genuine maximum-degree-four original graph, preserving all outside-candidate witness edges. This is a concrete next obstruction; the proof for two matching members does not eliminate it.
+**Open at the end of Stage 2; subsequently excluded in [Stage 3](route-b-stage3.md):** realize or exclude this `19,19,18` private-clique configuration in a genuine maximum-degree-four original graph, preserving all outside-candidate witness edges. The proof for two matching members alone does not eliminate it.
 
 ## 9. Computation and formalization boundaries
 

@@ -7,6 +7,9 @@ This directory contains Route B derivations, programs, and verification records.
 - [Stage 2: paper exclusion of the 39-edge obstruction](notes/route-b-stage2.md)
 - [Stage 2 template and boundary checks](results/stage2-checks.json)
 - [Stage 2 verification program](scripts/check_stage2.py)
+- [Stage 3: critical-clique rigidity and general compensation](notes/route-b-stage3.md)
+- [Stage 3 finite template checks](results/stage3-checks.json)
+- [Stage 3 verification program](scripts/check_stage3.py)
 
 ## Current mathematical status
 
@@ -14,9 +17,13 @@ Stage 2 gives a paper proof excluding all five parameter rows for `|F|=39`, indu
 
 For arbitrary matching number, a tertiary-optimal zero-deficit centre must now have candidate and full conflict degree nineteen, a private nineteen-clique, and exactly one shared candidate neighbour. A twice-covered vertex cannot serve two such centres.
 
-For the first `k=3` obstruction (`|F|=58`, `t=0`), the case `R=1` is excluded on paper. The remaining case has `R=0`, private-clique sizes `19,19,18`, and exactly two shared candidates. It remains open.
+Stage 3 proves a new rigidity statement on paper: a strong clique of nineteen edges, each with full conflict degree at least nineteen, lies in a whole original `C5[2]` component. A zero-deficit private clique would therefore force a fully selected exceptional component. After removing those components from the candidate set, every deficit is at least one.
 
-**None of the new Stage 2 lemmas has been formalized in Lean.** The finite checks cover 72 labelled obstruction-template checks and four exact boundary examples; they are not an exhaustive 39-edge search. The general 19 conjecture remains unproved.
+Consequently `sum delta + R >= |M|` holds for arbitrary matching number, proving the corrected 19 bound on paper. This also excludes the remaining `19,19,18` private-clique configuration from Stage 2.
+
+**None of the new Stage 2 or Stage 3 lemmas has been formalized in Lean.** The complete paper proof awaits independent verification and formalization. The existing kernel-certified endpoint remains the corrected 19.5 theorem.
+
+Stage 2 finite checks cover 72 labelled obstruction templates and four exact boundary examples. Stage 3 checks 600 triangle-root graphs, 1,082 saturated original core graphs with 3,662 candidate sets, and six compensation examples. In the saturated families, all 48 qualifying nineteen-cliques lie in original doubled-cycle components. These counts describe the programs' explicit scopes, not an exhaustive search over all original graphs.
 
 ## Reproduce the finite checks
 
@@ -24,6 +31,7 @@ From the repository root, using Python 3.10 or newer and no third-party packages
 
 ```sh
 python route-b/scripts/check_stage2.py
+python route-b/scripts/check_stage3.py
 ```
 
 All conflicts are computed in the supplied original graph, including original edges outside the candidate set.

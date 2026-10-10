@@ -6,7 +6,7 @@ This repository studies the conjectured prescribed-edge bound
 |F|\le 19\nu_s^G(F)+t_G(F).
 \]
 
-**Status on 11 October 2026: the general 19 bound is unproved, and no counterexample has been found in this project.**
+**Status on 11 October 2026: Route B now contains a complete paper proof of the corrected 19 bound, awaiting independent verification and Lean formalization.** The existing Lean-certified result remains the corrected 19.5 bound. No new Lean-certified 19 theorem is claimed.
 
 All strong conflicts are evaluated in the complete original graph `G`. Original edges outside `F` remain available as conflict witnesses. The correction `t_G(F)` counts only original `C5[2]` components whose entire twenty-edge sets belong to `F`.
 
@@ -15,6 +15,8 @@ All strong conflicts are evaluated in the complete original graph `G`. Original 
 - [Route B: global compensation and critical configurations](route-b/README.md)
 - [Stage 1: the exact identity and critical normalization](route-b/notes/route-b-stage1.md)
 - [Stage 2: a paper exclusion of all five 39-edge cases](route-b/notes/route-b-stage2.md)
+- [Stage 3: critical-clique rigidity and the general paper proof](route-b/notes/route-b-stage3.md)
+- [Stage 3 finite template checks](route-b/results/stage3-checks.json)
 - [Verification scope and reproduction](route-b/verification/README.md)
 - [Recorded upstream verification results](route-b/verification/results.json)
 
@@ -32,7 +34,9 @@ The upstream Git submodule is fixed at commit `2e91b05b25a4ee931a0490fefcdbb4f25
 
 New paper arguments are identified separately from existing Lean theorems. Upstream build logs do not certify the new arguments.
 
-Stage 2 now contains a **paper proof, not yet formalized**, of the corrected 19 bound when the induced-matching number is at most two. For matching number three, it excludes the 58-edge case with `R=1` and records the remaining `R=0` configuration. The general conjecture remains unproved.
+Stage 2 reduces every zero-deficit centre to a private nineteen-clique whose members have full conflict degree at least nineteen. Stage 3 proves on paper that such a clique lies in an original `C5[2]` component. After the component correction is removed, this excludes all zero-deficit centres and yields `sum delta + R >= |M|` for arbitrary matching number. It also resolves the `19,19,18` configuration left open at the end of Stage 2.
+
+The new proof uses original-graph degree and neighbour saturation, including unselected original witness edges. The finite checks concern explicitly stated templates and boundary examples; they are not an exhaustive search over original graphs or a substitute for formal verification.
 
 ## Initialize the pinned source
 
