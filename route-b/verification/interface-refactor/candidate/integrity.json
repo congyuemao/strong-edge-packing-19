@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-10T19:28:14.511108+00:00",
+  "preserved_baseline_commit": "cbc6f7b50f5defb2e03e9291dc3ccac2ff0e7abc",
+  "preserved_baseline_branch": "codex/route-b-stage1",
+  "candidate_branch": "codex/candidate-degree-interface",
+  "baseline_not_merged_or_replaced": true,
+  "source_hashes_matched": {
+    "baseline": 33,
+    "candidate": 33
+  },
+  "diagnostic_hashes_match_both_runs": true,
+  "active_verification_matches_candidate": true,
+  "main_source_byte_identical": true,
+  "normalization_declarations_unchanged": true,
+  "high_degree_exclusion_proof_unchanged": true,
+  "historical_finite_results_unchanged": true,
+  "upstream_commit": "2e91b05b25a4ee931a0490fefcdbb4f253be95c8",
+  "upstream_clean": true,
+  "maintained_files_scanned": 78,
+  "cjk_findings": [],
+  "broken_local_markdown_links": [],
+  "english_check_scope": "Maintained filenames and UTF-8 text files; scan for CJK text, with manual review of new prose."
+}

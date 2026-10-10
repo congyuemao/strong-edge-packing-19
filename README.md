@@ -19,6 +19,7 @@ All strong conflicts are evaluated in the complete original graph `G`. Original 
 - [Stage 3 finite template checks](route-b/results/stage3-checks.json)
 - [New Lean extension and exact formalization scope](route-b/lean/README.md)
 - [New Lean verification and axiom audit](route-b/verification/lean-extension/README.md)
+- [Stage 2 interface review and before/after measurements](route-b/notes/candidate-degree-interface-review.md)
 - [Verification scope and reproduction](route-b/verification/README.md)
 - [Recorded upstream verification results](route-b/verification/results.json)
 

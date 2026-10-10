@@ -1,0 +1,293 @@
+{
+  "baseline_commit": "cbc6f7b50f5defb2e03e9291dc3ccac2ff0e7abc",
+  "baseline": {
+    "lean_files": 29,
+    "physical_lines_including_audit": 3121,
+    "mathematical_lines_excluding_audit": 3023,
+    "declarations": 84,
+    "module_dependencies_including_self": {
+      "StrongEdge19.CriticalNormalization": [
+        "StrongEdge19.BipartiteSupport",
+        "StrongEdge19.ClosedCore",
+        "StrongEdge19.Compensation",
+        "StrongEdge19.CriticalNormalization",
+        "StrongEdge19.NineteenRigidity",
+        "StrongEdge19.OuterSupport",
+        "StrongEdge19.QuadCore",
+        "StrongEdge19.QuadLoad",
+        "StrongEdge19.QuadType",
+        "StrongEdge19.Root19",
+        "StrongEdge19.RootLoad",
+        "StrongEdge19.RootSaturation",
+        "StrongEdge19.Tertiary"
+      ],
+      "StrongEdge19.CriticalHighDegree": [
+        "StrongEdge19.BipartiteSupport",
+        "StrongEdge19.ClosedCore",
+        "StrongEdge19.Compensation",
+        "StrongEdge19.CriticalHighDegree",
+        "StrongEdge19.CriticalNineteen",
+        "StrongEdge19.CriticalNormalization",
+        "StrongEdge19.EndpointConflict",
+        "StrongEdge19.High22Root",
+        "StrongEdge19.High23Root",
+        "StrongEdge19.NineteenRigidity",
+        "StrongEdge19.OuterSupport",
+        "StrongEdge19.PrivateSubcubic",
+        "StrongEdge19.QuadCore",
+        "StrongEdge19.QuadLoad",
+        "StrongEdge19.QuadType",
+        "StrongEdge19.Root19",
+        "StrongEdge19.RootLoad",
+        "StrongEdge19.RootSaturation",
+        "StrongEdge19.SmallTypes",
+        "StrongEdge19.Tertiary",
+        "StrongEdge19.TypeCover"
+      ],
+      "StrongEdge19.CriticalNineteen": [
+        "StrongEdge19.BipartiteSupport",
+        "StrongEdge19.ClosedCore",
+        "StrongEdge19.Compensation",
+        "StrongEdge19.CriticalNineteen",
+        "StrongEdge19.CriticalNormalization",
+        "StrongEdge19.NineteenRigidity",
+        "StrongEdge19.OuterSupport",
+        "StrongEdge19.QuadCore",
+        "StrongEdge19.QuadLoad",
+        "StrongEdge19.QuadType",
+        "StrongEdge19.Root19",
+        "StrongEdge19.RootLoad",
+        "StrongEdge19.RootSaturation",
+        "StrongEdge19.Tertiary"
+      ],
+      "StrongEdge19.Main": [
+        "StrongEdge19.BipartiteSupport",
+        "StrongEdge19.ClosedCore",
+        "StrongEdge19.Compensation",
+        "StrongEdge19.CriticalHighDegree",
+        "StrongEdge19.CriticalNineteen",
+        "StrongEdge19.CriticalNormalization",
+        "StrongEdge19.EndpointConflict",
+        "StrongEdge19.High20Root",
+        "StrongEdge19.High20Triple",
+        "StrongEdge19.High22Root",
+        "StrongEdge19.High23Root",
+        "StrongEdge19.Main",
+        "StrongEdge19.NineteenRigidity",
+        "StrongEdge19.OuterSaturation",
+        "StrongEdge19.OuterSupport",
+        "StrongEdge19.Packing",
+        "StrongEdge19.PositiveDeficits",
+        "StrongEdge19.PrivateSubcubic",
+        "StrongEdge19.QuadCore",
+        "StrongEdge19.QuadLoad",
+        "StrongEdge19.QuadType",
+        "StrongEdge19.Root19",
+        "StrongEdge19.RootLoad",
+        "StrongEdge19.RootSaturation",
+        "StrongEdge19.SmallTypes",
+        "StrongEdge19.Tertiary",
+        "StrongEdge19.TypeCover"
+      ]
+    },
+    "normalization_calls_outside_its_definition": 3,
+    "full_build_and_audit_seconds": 344.873673
+  },
+  "candidate": {
+    "lean_files": 29,
+    "physical_lines_including_audit": 3113,
+    "mathematical_lines_excluding_audit": 3014,
+    "declarations": 83,
+    "module_dependencies_including_self": {
+      "StrongEdge19.CriticalNormalization": [
+        "StrongEdge19.Compensation",
+        "StrongEdge19.CriticalNormalization",
+        "StrongEdge19.Tertiary"
+      ],
+      "StrongEdge19.CriticalHighDegree": [
+        "StrongEdge19.Compensation",
+        "StrongEdge19.CriticalHighDegree",
+        "StrongEdge19.CriticalNormalization",
+        "StrongEdge19.EndpointConflict",
+        "StrongEdge19.High20Root",
+        "StrongEdge19.High20Triple",
+        "StrongEdge19.High22Root",
+        "StrongEdge19.High23Root",
+        "StrongEdge19.OuterSaturation",
+        "StrongEdge19.OuterSupport",
+        "StrongEdge19.PrivateSubcubic",
+        "StrongEdge19.Root19",
+        "StrongEdge19.RootLoad",
+        "StrongEdge19.RootSaturation",
+        "StrongEdge19.SmallTypes",
+        "StrongEdge19.Tertiary",
+        "StrongEdge19.TypeCover"
+      ],
+      "StrongEdge19.CriticalNineteen": [
+        "StrongEdge19.BipartiteSupport",
+        "StrongEdge19.ClosedCore",
+        "StrongEdge19.Compensation",
+        "StrongEdge19.CriticalNineteen",
+        "StrongEdge19.CriticalNormalization",
+        "StrongEdge19.NineteenRigidity",
+        "StrongEdge19.OuterSupport",
+        "StrongEdge19.QuadCore",
+        "StrongEdge19.QuadLoad",
+        "StrongEdge19.QuadType",
+        "StrongEdge19.Root19",
+        "StrongEdge19.RootLoad",
+        "StrongEdge19.RootSaturation",
+        "StrongEdge19.Tertiary"
+      ],
+      "StrongEdge19.Main": [
+        "StrongEdge19.BipartiteSupport",
+        "StrongEdge19.ClosedCore",
+        "StrongEdge19.Compensation",
+        "StrongEdge19.CriticalHighDegree",
+        "StrongEdge19.CriticalNineteen",
+        "StrongEdge19.CriticalNormalization",
+        "StrongEdge19.EndpointConflict",
+        "StrongEdge19.High20Root",
+        "StrongEdge19.High20Triple",
+        "StrongEdge19.High22Root",
+        "StrongEdge19.High23Root",
+        "StrongEdge19.Main",
+        "StrongEdge19.NineteenRigidity",
+        "StrongEdge19.OuterSaturation",
+        "StrongEdge19.OuterSupport",
+        "StrongEdge19.Packing",
+        "StrongEdge19.PositiveDeficits",
+        "StrongEdge19.PrivateSubcubic",
+        "StrongEdge19.QuadCore",
+        "StrongEdge19.QuadLoad",
+        "StrongEdge19.QuadType",
+        "StrongEdge19.Root19",
+        "StrongEdge19.RootLoad",
+        "StrongEdge19.RootSaturation",
+        "StrongEdge19.SmallTypes",
+        "StrongEdge19.Tertiary",
+        "StrongEdge19.TypeCover"
+      ]
+    },
+    "normalization_calls_outside_its_definition": 1,
+    "full_build_and_audit_seconds": 344.6400682
+  },
+  "changed_mathematical_files": {
+    "route-b/lean/StrongEdge19/CriticalHighDegree.lean": {
+      "before_lines": 92,
+      "after_lines": 102
+    },
+    "route-b/lean/StrongEdge19/CriticalNineteen.lean": {
+      "before_lines": 79,
+      "after_lines": 72
+    },
+    "route-b/lean/StrongEdge19/CriticalNormalization.lean": {
+      "before_lines": 149,
+      "after_lines": 149
+    },
+    "route-b/lean/StrongEdge19/PositiveDeficits.lean": {
+      "before_lines": 88,
+      "after_lines": 76
+    }
+  },
+  "main_source_byte_identical": true,
+  "timing_caveat": "One sequential full rebuild per version; includes all-declaration axiom audit. Reuses cached upstream and mathlib. These are observed wall times, not a statistical speedup claim.",
+  "elaborated_proof_dependency_comparison": {
+    "StrongEdge19.zero_deficit_degree_le_twenty": {
+      "before_count": 26,
+      "after_count": 26,
+      "removed": [],
+      "added": [],
+      "before_direct": [
+        "StrongEdge19.IsTertiaryOptimal",
+        "StrongEdge19.deficit",
+        "StrongEdge19.high21_clique_card_le_sixteen_of_root_four",
+        "StrongEdge19.high22_clique_card_le_fifteen_of_root_four",
+        "StrongEdge19.high23_clique_card_le_thirteen_of_root_four",
+        "StrongEdge19.induced_clique_image",
+        "StrongEdge19.private_subcubic_card_le_thirteen",
+        "StrongEdge19.zero_deficit_degree_range",
+        "StrongEdge19.zero_deficit_full_degree_and_closed_neighborhood"
+      ],
+      "after_direct": [
+        "StrongEdge19.IsTertiaryOptimal",
+        "StrongEdge19.deficit",
+        "StrongEdge19.high21_clique_card_le_sixteen_of_root_four",
+        "StrongEdge19.high22_clique_card_le_fifteen_of_root_four",
+        "StrongEdge19.high23_clique_card_le_thirteen_of_root_four",
+        "StrongEdge19.induced_clique_image",
+        "StrongEdge19.private_subcubic_card_le_thirteen",
+        "StrongEdge19.zero_deficit_degree_range",
+        "StrongEdge19.zero_deficit_full_degree_and_closed_neighborhood"
+      ]
+    },
+    "StrongEdge19.critical_degree_nineteen_forces_selected_twenty": {
+      "before_count": 38,
+      "after_count": 31,
+      "removed": [
+        "StrongEdge19.IsTertiaryOptimal",
+        "StrongEdge19.centre_cost_eq_degree_of_private_witness",
+        "StrongEdge19.private_cost_mono_of_equal_degree",
+        "StrongEdge19.private_swap_optimal",
+        "StrongEdge19.zero_deficit_degree_range",
+        "StrongEdge19.zero_deficit_full_degree_and_closed_neighborhood",
+        "StrongEdge19.zero_deficit_full_degree_witness"
+      ],
+      "added": [],
+      "before_direct": [
+        "StrongEdge19.IsTertiaryOptimal",
+        "StrongEdge19.deficit",
+        "StrongEdge19.high19_nineteen_clique_extends_to_twenty",
+        "StrongEdge19.induced_clique_image",
+        "StrongEdge19.zero_deficit_degree_range",
+        "StrongEdge19.zero_deficit_full_degree_and_closed_neighborhood"
+      ],
+      "after_direct": [
+        "StrongEdge19.deficit",
+        "StrongEdge19.high19_nineteen_clique_extends_to_twenty",
+        "StrongEdge19.induced_clique_image",
+        "StrongEdge19.induced_neighborhood_closed_of_degree_eq"
+      ]
+    },
+    "StrongEdge19.zero_deficit_impossible": {
+      "before_count": 65,
+      "after_count": 64,
+      "removed": [
+        "StrongEdge19.zero_deficit_remaining_degree_range",
+        "StrongEdge19.zero_deficit_remaining_degree_twenty"
+      ],
+      "added": [
+        "StrongEdge19.zero_deficit_candidate_degree_eq_nineteen"
+      ],
+      "before_direct": [
+        "StrongEdge19.IsTertiaryOptimal",
+        "StrongEdge19.deficit",
+        "StrongEdge19.high20_clique_card_le_seventeen",
+        "StrongEdge19.zero_deficit_remaining_degree_twenty"
+      ],
+      "after_direct": [
+        "StrongEdge19.IsTertiaryOptimal",
+        "StrongEdge19.critical_degree_nineteen_forces_selected_twenty",
+        "StrongEdge19.deficit",
+        "StrongEdge19.zero_deficit_candidate_degree_eq_nineteen"
+      ]
+    },
+    "StrongEdge19.prescribed_edge_bound19": {
+      "before_count": 79,
+      "after_count": 78,
+      "removed": [
+        "StrongEdge19.zero_deficit_remaining_degree_range",
+        "StrongEdge19.zero_deficit_remaining_degree_twenty"
+      ],
+      "added": [
+        "StrongEdge19.zero_deficit_candidate_degree_eq_nineteen"
+      ],
+      "before_direct": [
+        "StrongEdge19.induced_matching_packing19_with_connected_component_count"
+      ],
+      "after_direct": [
+        "StrongEdge19.induced_matching_packing19_with_connected_component_count"
+      ]
+    }
+  }
+}

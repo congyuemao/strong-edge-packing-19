@@ -5,6 +5,8 @@ import StrongEdge19
 #check StrongEdge19.compensation_identity
 #check StrongEdge19.high20_clique_card_le_seventeen
 #check StrongEdge19.private_subcubic_card_le_thirteen
+#check StrongEdge19.zero_deficit_candidate_degree_eq_nineteen
+#check StrongEdge19.critical_degree_nineteen_forces_selected_twenty
 #check StrongEdge19.deficit_pos_of_no_twenty_clique
 #check StrongEdge19.global_compensation_of_no_twenty_clique
 #check StrongEdge19.induced_matching_packing19_unconditional
@@ -89,10 +91,9 @@ import StrongEdge19
 #print axioms StrongEdge19.three_triple_types_share_label
 #print axioms StrongEdge19.two_type_stars_inside
 #print axioms StrongEdge19.two_type_stars_inside_add_external_edge
+#print axioms StrongEdge19.zero_deficit_candidate_degree_eq_nineteen
 #print axioms StrongEdge19.zero_deficit_degree_le_twenty
 #print axioms StrongEdge19.zero_deficit_degree_range
 #print axioms StrongEdge19.zero_deficit_full_degree_and_closed_neighborhood
 #print axioms StrongEdge19.zero_deficit_full_degree_witness
 #print axioms StrongEdge19.zero_deficit_impossible
-#print axioms StrongEdge19.zero_deficit_remaining_degree_range
-#print axioms StrongEdge19.zero_deficit_remaining_degree_twenty

@@ -1,7 +1,7 @@
 module
 
 public import StrongEdge19.CriticalHighDegree
-public import StrongEdge19.High20Root
+public import StrongEdge19.CriticalNineteen
 
 @[expose] public section
 
@@ -25,21 +25,9 @@ theorem zero_deficit_impossible
       (fun e : F => (conflictGraph G).degree e.val) M)
     {v : F} (hv : v ∈ M)
     (hzero : deficit ((conflictGraph G).induce F) M v = 0) : False := by
-  classical
-  let H := (conflictGraph G).induce F
-  let P := privateFinset H M v
-  obtain ⟨hd, _, hp⟩ := zero_deficit_remaining_degree_twenty G F hΔ hno M hM hv hzero
-  have hP : H.IsClique (P : Set F) := by
-    intro a ha b hb hab
-    exact private_isClique H M v hM.1.1 hv ((mem_privateFinset H M v a).mp ha)
-      ((mem_privateFinset H M v b).mp hb) hab
-  have hb := clique_bound_induce (conflictGraph G) F 20 17
-    (high20_clique_card_le_seventeen G hΔ) P hP (fun a ha => by
-      have hm := private_degree_mono H M hM.1 hv ((mem_privateFinset H M v a).mp ha)
-      change H.degree v = 20 at hd
-      change 20 ≤ H.degree a
-      omega)
-  change P.card = 18 at hp
+  have hd := zero_deficit_candidate_degree_eq_nineteen G F hΔ M hM hv hzero
+  obtain ⟨T, hTF, hTc, hT⟩ := critical_degree_nineteen_forces_selected_twenty G F hΔ M hM.1 hv hzero hd
+  have hb := hno T hTF hT
   omega
 
 /-- Tertiary optimality gives the stronger pointwise compensation, one unit at every centre. -/

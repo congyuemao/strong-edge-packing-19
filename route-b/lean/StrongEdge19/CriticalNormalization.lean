@@ -2,7 +2,7 @@ module
 
 public import StrongEdge19.Tertiary
 public import StrongEdge19.Compensation
-public import StrongEdge19.NineteenRigidity
+public import StrongEdge.Packing195Thresholds
 
 @[expose] public section
 

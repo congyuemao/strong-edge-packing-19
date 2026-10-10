@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-10T19:26:02.604571+00:00",
+  "python_version": "3.12.14",
+  "script_sha256": {
+    "check-refactor-finite-regressions.py": "75b68c623e1e5fcdf43f9e4345aef88162bdf8cb6c57e63246ccc008ee02d423",
+    "check_stage2.py": "bad586fc16cf7833edebac84158e59ef3365536612f8ee61bc4ce389a3b43566",
+    "check_stage3.py": "6eaf882e36c6f06d55e0031becd44fe06630e3c3ee1b3b4aca43fd58acd8ada0"
+  },
+  "historical_results_exactly_reproduced": [
+    "stage2-checks.json",
+    "stage3-checks.json"
+  ],
+  "stage2_template_count": 72,
+  "stage2_examples": 4,
+  "stage3_triangle_roots": 600,
+  "stage3_family_counts": {
+    "type_multisets": 28,
+    "original_core_graphs": 1082,
+    "candidate_sets": 3662,
+    "nineteen_cliques": 48,
+    "high_nineteen_cliques": 48
+  },
+  "stage3_compensation_examples": 6,
+  "scope": "Finite regression checks of the existing stated families only; not a formal proof or an exhaustive graph search."
+}

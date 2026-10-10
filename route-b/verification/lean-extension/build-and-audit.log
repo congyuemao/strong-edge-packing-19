@@ -1,27 +1,27 @@
-Checking StrongEdge19.Tertiary
-Checking StrongEdge19.Compensation
 Checking StrongEdge19.Root19
 Checking StrongEdge19.RootLoad
 Checking StrongEdge19.RootSaturation
 Checking StrongEdge19.OuterSupport
+Checking StrongEdge19.TypeCover
+Checking StrongEdge19.OuterSaturation
+Checking StrongEdge19.High20Triple
+Checking StrongEdge19.SmallTypes
+Checking StrongEdge19.High20Root
+Checking StrongEdge19.Tertiary
+Checking StrongEdge19.Compensation
+Checking StrongEdge19.CriticalNormalization
+Checking StrongEdge19.EndpointConflict
+Checking StrongEdge19.PrivateSubcubic
+Checking StrongEdge19.High22Root
+Checking StrongEdge19.High23Root
+Checking StrongEdge19.CriticalHighDegree
 Checking StrongEdge19.QuadType
 Checking StrongEdge19.QuadLoad
 Checking StrongEdge19.BipartiteSupport
 Checking StrongEdge19.QuadCore
 Checking StrongEdge19.ClosedCore
 Checking StrongEdge19.NineteenRigidity
-Checking StrongEdge19.CriticalNormalization
 Checking StrongEdge19.CriticalNineteen
-Checking StrongEdge19.EndpointConflict
-Checking StrongEdge19.PrivateSubcubic
-Checking StrongEdge19.SmallTypes
-Checking StrongEdge19.TypeCover
-Checking StrongEdge19.High22Root
-Checking StrongEdge19.High23Root
-Checking StrongEdge19.CriticalHighDegree
-Checking StrongEdge19.OuterSaturation
-Checking StrongEdge19.High20Triple
-Checking StrongEdge19.High20Root
 Checking StrongEdge19.PositiveDeficits
 Checking StrongEdge19.Packing
 Checking StrongEdge19.Main
@@ -48,6 +48,21 @@ StrongEdge19.private_subcubic_card_le_thirteen.{u_1} {V : Type u_1} [Fintype V] 
             x).card ≤
         3) :
   (StrongEdge.privateFinset (SimpleGraph.induce F (StrongEdge.conflictGraph G)) M v).card ≤ 13
+StrongEdge19.zero_deficit_candidate_degree_eq_nineteen.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj] (F : Set ↑G.edgeSet)
+  [DecidablePred fun x => x ∈ F] (hΔ : ∀ (x : V), G.degree x ≤ 4) (M : Finset ↑F)
+  (hM :
+    StrongEdge19.IsTertiaryOptimal (SimpleGraph.induce F (StrongEdge.conflictGraph G))
+      (fun e => (StrongEdge.conflictGraph G).degree ↑e) M)
+  {v : ↑F} (hv : v ∈ M) (hzero : StrongEdge19.deficit (SimpleGraph.induce F (StrongEdge.conflictGraph G)) M v = 0) :
+  (SimpleGraph.induce F (StrongEdge.conflictGraph G)).degree v = 19
+StrongEdge19.critical_degree_nineteen_forces_selected_twenty.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj] (F : Set ↑G.edgeSet)
+  [DecidablePred fun x => x ∈ F] (hΔ : ∀ (x : V), G.degree x ≤ 4) (M : Finset ↑F)
+  (hM : StrongEdge.IsOptimal (SimpleGraph.induce F (StrongEdge.conflictGraph G)) M) {v : ↑F} (hv : v ∈ M)
+  (hzero : StrongEdge19.deficit (SimpleGraph.induce F (StrongEdge.conflictGraph G)) M v = 0)
+  (hd : (SimpleGraph.induce F (StrongEdge.conflictGraph G)).degree v = 19) :
+  ∃ T, ↑T ⊆ F ∧ T.card = 20 ∧ (StrongEdge.conflictGraph G).IsClique ↑T
 StrongEdge19.deficit_pos_of_no_twenty_clique.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
   [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj] (F : Set ↑G.edgeSet)
   [DecidablePred fun x => x ∈ F] (hΔ : ∀ (x : V), G.degree x ≤ 4)
@@ -178,6 +193,7 @@ StrongEdge19.candidate_card_le_thirty_eight_of_indepNum_le_two.{u_1} {V : Type u
 'StrongEdge19.three_triple_types_share_label' depends on axioms: [propext, Classical.choice, Quot.sound]
 'StrongEdge19.two_type_stars_inside' depends on axioms: [propext, Classical.choice, Quot.sound]
 'StrongEdge19.two_type_stars_inside_add_external_edge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.zero_deficit_candidate_degree_eq_nineteen' depends on axioms: [propext, Classical.choice, Quot.sound]
 'StrongEdge19.zero_deficit_degree_le_twenty' depends on axioms: [propext, Classical.choice, Quot.sound]
 'StrongEdge19.zero_deficit_degree_range' depends on axioms: [propext, Classical.choice, Quot.sound]
 'StrongEdge19.zero_deficit_full_degree_and_closed_neighborhood' depends on axioms: [propext,
@@ -185,5 +201,3 @@ StrongEdge19.candidate_card_le_thirty_eight_of_indepNum_le_two.{u_1} {V : Type u
  Quot.sound]
 'StrongEdge19.zero_deficit_full_degree_witness' depends on axioms: [propext, Classical.choice, Quot.sound]
 'StrongEdge19.zero_deficit_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
-'StrongEdge19.zero_deficit_remaining_degree_range' depends on axioms: [propext, Classical.choice, Quot.sound]
-'StrongEdge19.zero_deficit_remaining_degree_twenty' depends on axioms: [propext, Classical.choice, Quot.sound]

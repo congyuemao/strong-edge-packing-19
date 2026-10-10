@@ -23,9 +23,9 @@ This avoids a separate explicit classification of labelled four-cycles in the qu
 
 ## Connection to critical private cliques
 
-For a tertiary-optimal centre with zero deficit and candidate degree nineteen, the private clique has nineteen members, all of full conflict degree at least nineteen. Rigidity gives a containing original twenty-clique. Its members all conflict with the centre, except the centre itself. Full-neighbourhood closure therefore places the entire twenty-clique in the candidate set.
+For an optimal centre (maximum independent set with minimum candidate-degree sum) with zero deficit and candidate degree nineteen, the deficit definition gives private size nineteen directly. Private degree monotonicity makes every private member have full conflict degree at least nineteen. Stage 3 rigidity gives a containing original twenty-clique. Upstream twenty-clique closure bounds the centre's full neighbourhood by the other nineteen clique members. Its candidate degree is already nineteen, so its full and candidate degrees agree. Equality of these nested finite neighbourhoods places the entire twenty-clique in the candidate set.
 
-The checked corollary rules out this case whenever wholly selected twenty-cliques have been excluded. The other four critical degrees are now excluded by the Stage 2 arguments below.
+This branch requires no tertiary exchange. The Stage 2 interface `zero_deficit_candidate_degree_eq_nineteen` supplies its candidate-degree hypothesis; `zero_deficit_impossible` combines the two results when wholly selected twenty-cliques have been excluded. Tertiary optimization and full-neighbourhood closure remain necessary inside the exclusions at degrees twenty-one through twenty-three. The [interface review](candidate-degree-interface-review.md) records the comparison with the preserved original implementation.
 
 ## Adaptations of the Stage 2 proof
 

@@ -1,0 +1,189 @@
+Checking StrongEdge19.Tertiary
+Checking StrongEdge19.Compensation
+Checking StrongEdge19.Root19
+Checking StrongEdge19.RootLoad
+Checking StrongEdge19.RootSaturation
+Checking StrongEdge19.OuterSupport
+Checking StrongEdge19.QuadType
+Checking StrongEdge19.QuadLoad
+Checking StrongEdge19.BipartiteSupport
+Checking StrongEdge19.QuadCore
+Checking StrongEdge19.ClosedCore
+Checking StrongEdge19.NineteenRigidity
+Checking StrongEdge19.CriticalNormalization
+Checking StrongEdge19.CriticalNineteen
+Checking StrongEdge19.EndpointConflict
+Checking StrongEdge19.PrivateSubcubic
+Checking StrongEdge19.SmallTypes
+Checking StrongEdge19.TypeCover
+Checking StrongEdge19.High22Root
+Checking StrongEdge19.High23Root
+Checking StrongEdge19.CriticalHighDegree
+Checking StrongEdge19.OuterSaturation
+Checking StrongEdge19.High20Triple
+Checking StrongEdge19.High20Root
+Checking StrongEdge19.PositiveDeficits
+Checking StrongEdge19.Packing
+Checking StrongEdge19.Main
+Checking StrongEdge19
+Checking StrongEdge19.Audit
+StrongEdge19.compensation_identity.{u_1} {W : Type u_1} [Fintype W] [DecidableEq W] (H : SimpleGraph W)
+  [DecidableRel H.Adj] (M : Finset W) (hM : H.IsMaximumIndepSet M) :
+  2 * ↑(Fintype.card W) = 39 * ↑M.card - ∑ e ∈ M, StrongEdge19.deficit H M e - ↑(StrongEdge19.excessCoverage H M)
+StrongEdge19.high20_clique_card_le_seventeen.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4)
+  (Q : Finset ↑G.edgeSet) (hQ : (StrongEdge.conflictGraph G).IsClique ↑Q)
+  (h20 : ∀ e ∈ Q, 20 ≤ (StrongEdge.conflictGraph G).degree e) : Q.card ≤ 17
+StrongEdge19.private_subcubic_card_le_thirteen.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj] (F : Set ↑G.edgeSet)
+  [DecidablePred fun x => x ∈ F] (hΔ : ∀ (x : V), G.degree x ≤ 4) (M : Finset ↑F)
+  (hM : (SimpleGraph.induce F (StrongEdge.conflictGraph G)).IsMaximumIndepSet M) {v : ↑F} (hv : v ∈ M)
+  (hclosed : ∀ (f : ↑G.edgeSet), (StrongEdge.conflictGraph G).Adj (↑v) f → f ∈ F)
+  (h21 : 21 ≤ (StrongEdge.conflictGraph G).degree ↑v)
+  (hd :
+    ∀ (x : V),
+      (StrongEdge.edgeIncidences G
+            (Finset.image Subtype.val
+              (StrongEdge.privateFinset (SimpleGraph.induce F (StrongEdge.conflictGraph G)) M v))
+            x).card ≤
+        3) :
+  (StrongEdge.privateFinset (SimpleGraph.induce F (StrongEdge.conflictGraph G)) M v).card ≤ 13
+StrongEdge19.deficit_pos_of_no_twenty_clique.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj] (F : Set ↑G.edgeSet)
+  [DecidablePred fun x => x ∈ F] (hΔ : ∀ (x : V), G.degree x ≤ 4)
+  (hno : ∀ (T : Finset ↑G.edgeSet), ↑T ⊆ F → (StrongEdge.conflictGraph G).IsClique ↑T → T.card ≤ 19) (M : Finset ↑F)
+  (hM :
+    StrongEdge19.IsTertiaryOptimal (SimpleGraph.induce F (StrongEdge.conflictGraph G))
+      (fun e => (StrongEdge.conflictGraph G).degree ↑e) M)
+  {v : ↑F} (hv : v ∈ M) : 1 ≤ StrongEdge19.deficit (SimpleGraph.induce F (StrongEdge.conflictGraph G)) M v
+StrongEdge19.global_compensation_of_no_twenty_clique.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj] (F : Set ↑G.edgeSet)
+  [DecidablePred fun x => x ∈ F] (hΔ : ∀ (x : V), G.degree x ≤ 4)
+  (hno : ∀ (T : Finset ↑G.edgeSet), ↑T ⊆ F → (StrongEdge.conflictGraph G).IsClique ↑T → T.card ≤ 19) (M : Finset ↑F)
+  (hM :
+    StrongEdge19.IsTertiaryOptimal (SimpleGraph.induce F (StrongEdge.conflictGraph G))
+      (fun e => (StrongEdge.conflictGraph G).degree ↑e) M) :
+  ↑M.card ≤
+    ∑ e ∈ M, StrongEdge19.deficit (SimpleGraph.induce F (StrongEdge.conflictGraph G)) M e +
+      ↑(StrongEdge19.excessCoverage (SimpleGraph.induce F (StrongEdge.conflictGraph G)) M)
+StrongEdge19.induced_matching_packing19_unconditional.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj]
+  (hΔ : ∀ (x : V), G.degree x ≤ 4) (F : Finset ↑G.edgeSet) :
+  ∃ M ⊆ F, StrongEdge.IsInducedMatching G ↑M ∧ F.card ≤ 19 * M.card + StrongEdge.tightComponentCount G F
+StrongEdge19.induced_matching_packing19_with_connected_component_count.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj]
+  (hΔ : ∀ (x : V), G.degree x ≤ 4) (F : Finset ↑G.edgeSet) :
+  ∃ M ⊆ F, StrongEdge.IsInducedMatching G ↑M ∧ F.card ≤ 19 * M.card + (StrongEdge.tightComponentsIn G F).card
+StrongEdge19.prescribed_edge_bound19.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj] (hΔ : ∀ (x : V), G.degree x ≤ 4)
+  (F : Finset ↑G.edgeSet) :
+  F.card ≤
+    19 * (SimpleGraph.induce (↑F) (StrongEdge.conflictGraph G)).indepNum + (StrongEdge.tightComponentsIn G F).card
+StrongEdge19.candidate_card_le_thirty_eight_of_indepNum_le_two.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [DecidableRel G.Adj] [DecidableRel (StrongEdge.conflictGraph G).Adj]
+  (hΔ : ∀ (x : V), G.degree x ≤ 4) (F : Finset ↑G.edgeSet) (hzero : (StrongEdge.tightComponentsIn G F).card = 0)
+  (hsmall : (SimpleGraph.induce (↑F) (StrongEdge.conflictGraph G)).indepNum ≤ 2) : F.card ≤ 38
+'StrongEdge19.candidate_card_le_thirty_eight_of_indepNum_le_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StrongEdge19.centre_cost_eq_degree_of_private_witness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.closed_ten_edges_card_le_twenty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.compensation_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.conflict_stays_in_closed_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.coverage_pointwise_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.critical_degree_nineteen_forces_selected_twenty' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StrongEdge19.deficit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.deficit_pos_of_no_twenty_clique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.edges_crossing_parts_card_le_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.edges_supported_on_two_card_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.excessCoverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.exists_other_outer_neighbor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.four_outer_edges_impossible_at_high20' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.four_outer_edges_impossible_at_high21' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.global_compensation_of_no_twenty_clique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.high19_large_clique_closed_ten_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.high19_large_clique_exists_type_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.high19_large_clique_root_neighborhood_independent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StrongEdge19.high19_large_quad_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.high19_large_quad_other_types_le_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.high19_large_quad_outer_supported' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.high19_large_quad_positive_type_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.high19_large_quad_residual_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.high19_large_triple_requires_four_outer_edges' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.high19_nineteen_clique_extends_to_twenty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.high19_nineteen_clique_in_five_cycle_blowup' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.high19_no_quad_triple_multiple' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.high19_no_three_triple_types' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.high19_root_label_budget_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.high19_root_triangle_outer_card_le_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.high19_triangle_external_multiple_card_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.high19_two_triples_outer_card_le_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.high20_clique_card_le_seventeen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.high20_outer_card_le_one_of_root_type_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.high20_unique_triple_outer_card_le_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.high21_clique_card_le_sixteen_of_root_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.high21_small_types_rootEdges_card_le_eight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.high22_clique_card_le_fifteen_of_root_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.high23_clique_card_le_thirteen_of_root_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.induced_clique_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.induced_matching_packing19_of_no_full_tight_component' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StrongEdge19.induced_matching_packing19_of_no_twenty_clique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.induced_matching_packing19_unconditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.induced_matching_packing19_with_connected_component_count' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StrongEdge19.induced_matching_packing19_with_twenty_clique_count' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StrongEdge19.induced_neighborhood_closed_of_degree_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.IsTertiaryOptimal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.labels_saturated_of_card_ge_sixteen_add_outer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.large_clique_exists_root_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.multiple_restricted_degree_add_type_le_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.nineteen_bound_iff_compensation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.nineteen_bound_of_positive_deficits' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.no_triple_of_saturated_independent_labels' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.outer_root_neighborhood_subset_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.prescribed_edge_bound19' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.private_cost_mono_of_equal_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.private_double_count_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.private_missing_edge_zero_incidence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.private_subcubic_card_le_thirteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.private_swap_optimal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.privateOwners_card_eq_indicator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.restricted_degree_two_clique_at_leaf_card_le_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StrongEdge19.root_label_load_add_degree_le_twenty_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.rootTips_card_le_five_of_three_equal_full_double_types' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StrongEdge19.rootTips_card_le_four_of_disjoint_full_double_types' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StrongEdge19.selected_tip_adj_full_double_of_missing_label' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.small_complementary_types_outer_card_le_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.small_types_clique_card_le_seventeen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.strongConflict_of_adjacent_endpoints' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.strongConflict_of_meets_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.strongConflict_of_shared_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.tertiary_optimal_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.three_outer_edges_have_saturated_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.three_triple_types_share_label' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.two_type_stars_inside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.two_type_stars_inside_add_external_edge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.zero_deficit_degree_le_twenty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.zero_deficit_degree_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.zero_deficit_full_degree_and_closed_neighborhood' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StrongEdge19.zero_deficit_full_degree_witness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.zero_deficit_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.zero_deficit_remaining_degree_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdge19.zero_deficit_remaining_degree_twenty' depends on axioms: [propext, Classical.choice, Quot.sound]

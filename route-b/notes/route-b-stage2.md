@@ -203,6 +203,8 @@ Thus only degree nineteen remains, with private size nineteen. Its closed candid
 
 This is a paper corollary for arbitrary matching number, not a general 19-packing theorem.
 
+**Formal interface update:** the Lean theorem `zero_deficit_candidate_degree_eq_nineteen` exports only `d_H(e)=19`. The private size follows directly from the deficit definition. The normalization conclusions above remain available and are used internally to exclude degrees twenty-one through twenty-three, but Stage 3 no longer receives them as prerequisites: nineteen-clique rigidity recovers full degree and closure for its degree-nineteen case. See the [interface review](candidate-degree-interface-review.md). The following small-matching-number arguments are retained as the historical paper route.
+
 ## 7. The remaining degree-nineteen obstruction
 
 ### Lemma 7.1: a twice-covered vertex cannot serve two zero-deficit centres

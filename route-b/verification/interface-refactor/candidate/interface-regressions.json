@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "label": "candidate",
+  "checks": [
+    {
+      "source": "Regression.lean",
+      "sha256": "a3693ff2cb3691c75885d3076b7b3f21afa94c7cebc6e8c8bab4ac82fad52e35",
+      "exit_code": 0
+    },
+    {
+      "source": "Dependencies.lean",
+      "sha256": "abe2554d7343dc61a7a447e87161bcae7040d9153f2d5d7a723ff02b9e515265",
+      "exit_code": 0
+    }
+  ]
+}
