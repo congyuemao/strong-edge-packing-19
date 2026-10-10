@@ -4,10 +4,11 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
-$researchRoot = Split-Path $PSScriptRoot -Parent
+$routeRoot = Split-Path $PSScriptRoot -Parent
+$researchRoot = Split-Path $routeRoot -Parent
 $fixedRoot = Join-Path $researchRoot 'upstream/packing195'
 $fixedLean = Join-Path $fixedRoot 'lean'
-$recordRoot = Join-Path $researchRoot 'verification'
+$recordRoot = Join-Path $routeRoot 'verification'
 $expectedCommit = '2e91b05b25a4ee931a0490fefcdbb4f253be95c8'
 if (-not $ProjectDirectory) { $ProjectDirectory = $fixedLean }
 $ProjectDirectory = (Resolve-Path -LiteralPath $ProjectDirectory).Path
@@ -95,7 +96,7 @@ try {
         allowed_axioms = $allowed
         axiom_audits = $auditEntries
         source_hashes = $fileRecords
-        scope = 'Existing 19.5 development only; new paper lemmas in notes/route-b-stage1.md are not formalized.'
+        scope = 'Existing 19.5 development only; new paper lemmas in route-b/notes/route-b-stage1.md are not formalized.'
     }
     [IO.File]::WriteAllText((Join-Path $recordRoot 'results.json'), ($result | ConvertTo-Json -Depth 8) + "`n", $utf8)
     Write-Output "PASS: $($fileRecords.Count) source files matched; $($auditEntries.Count) axiom audits matched and passed."
