@@ -6,7 +6,7 @@ This repository studies the conjectured prescribed-edge bound
 |F|\le 19\nu_s^G(F)+t_G(F).
 \]
 
-**Status on 11 October 2026: Route B now contains a complete paper proof of the corrected 19 bound, awaiting independent verification and Lean formalization.** The existing Lean-certified result remains the corrected 19.5 bound. No new Lean-certified 19 theorem is claimed.
+**Status on 11 October 2026: Route B contains a complete paper proof and a partially completed Lean formalization.** The new Lean extension verifies the compensation identity, tertiary normalization, nineteen-clique rigidity, and exclusion of critical degree nineteen. The new Stage 2 exclusions for degrees twenty through twenty-three and the full corrected 19 theorem remain to be formalized. The complete Lean-certified packing bound remains 19.5.
 
 All strong conflicts are evaluated in the complete original graph `G`. Original edges outside `F` remain available as conflict witnesses. The correction `t_G(F)` counts only original `C5[2]` components whose entire twenty-edge sets belong to `F`.
 
@@ -17,6 +17,8 @@ All strong conflicts are evaluated in the complete original graph `G`. Original 
 - [Stage 2: a paper exclusion of all five 39-edge cases](route-b/notes/route-b-stage2.md)
 - [Stage 3: critical-clique rigidity and the general paper proof](route-b/notes/route-b-stage3.md)
 - [Stage 3 finite template checks](route-b/results/stage3-checks.json)
+- [New Lean extension and exact formalization scope](route-b/lean/README.md)
+- [New Lean verification and axiom audit](route-b/verification/lean-extension/README.md)
 - [Verification scope and reproduction](route-b/verification/README.md)
 - [Recorded upstream verification results](route-b/verification/results.json)
 
@@ -34,7 +36,7 @@ The upstream Git submodule is fixed at commit `2e91b05b25a4ee931a0490fefcdbb4f25
 
 New paper arguments are identified separately from existing Lean theorems. Upstream build logs do not certify the new arguments.
 
-Stage 2 reduces every zero-deficit centre to a private nineteen-clique whose members have full conflict degree at least nineteen. Stage 3 proves on paper that such a clique lies in an original `C5[2]` component. After the component correction is removed, this excludes all zero-deficit centres and yields `sum delta + R >= |M|` for arbitrary matching number. It also resolves the `19,19,18` configuration left open at the end of Stage 2.
+On paper, Stage 2 reduces every zero-deficit centre to a private nineteen-clique whose members have full conflict degree at least nineteen. Stage 3 proves that such a clique lies in an original `C5[2]` component; that rigidity statement is now also checked in the new Lean extension. The paper chain then excludes all zero-deficit centres after component removal and yields `sum delta + R >= |M|` for arbitrary matching number. Its Stage 2 reduction is still pending formalization.
 
 The new proof uses original-graph degree and neighbour saturation, including unselected original witness edges. The finite checks concern explicitly stated templates and boundary examples; they are not an exhaustive search over original graphs or a substitute for formal verification.
 

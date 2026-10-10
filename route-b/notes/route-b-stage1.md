@@ -2,7 +2,7 @@
 
 Date: 11 October 2026 (Australia/Sydney).
 
-**Evidence status.** Section 1 identifies existing Lean results. Sections 2-7 contain paper derivations from those results; these new derivations have not been formalized. Section 8 records the tasks proposed at the end of Stage 1. No 39-edge enumeration was performed in Stage 1, and Stage 1 did not prove the 19 bound or exclude any of its five critical parameter rows.
+**Evidence status.** Section 1 identifies existing Lean results. Sections 2-7 were originally paper derivations. The [new Lean extension](../lean/README.md) now checks the exact compensation identity, tertiary optimization, critical degree range, full-degree witness, and full-neighbourhood closure. Other derivations retain their paper status unless explicitly listed there. Section 8 records the tasks proposed at the end of Stage 1. No 39-edge enumeration was performed in Stage 1, and Stage 1 did not prove the 19 bound or exclude any of its five critical parameter rows.
 
 ## 1. Pinned source, definitions, and theorem interfaces
 

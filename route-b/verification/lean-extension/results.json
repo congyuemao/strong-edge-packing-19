@@ -1,0 +1,500 @@
+{
+  "status": "passed",
+  "started_utc": "2026-10-10T18:27:25.7351607+00:00",
+  "finished_utc": "2026-10-10T18:30:31.4079089+00:00",
+  "lean_version": "Lean (version 4.35.0-rc4, x86_64-w64-windows-gnu, commit c29b6dda4f7c20e3eeaa717c4e565663c5cfa364, Release)",
+  "upstream_commit": "2e91b05b25a4ee931a0490fefcdbb4f253be95c8",
+  "upstream_project": "C:\\Users\\21161\\Documents\\ChatGPT\\strong-edge-packing-195\\lean",
+  "upstream_files_byte_compared": 79,
+  "upstream_tracked_source_unchanged": true,
+  "build_mode": "All extension modules recompiled; compiled upstream and mathlib dependencies reused.",
+  "build_exit_code": 0,
+  "lean_source_file_count": 16,
+  "declaration_count": 49,
+  "axiom_audit_count": 49,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "axiom_audits": [
+    {
+      "declaration": "StrongEdge19.edges_crossing_parts_card_le_product",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.small_complementary_types_outer_card_le_two",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.high19_large_quad_residual_closed",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.high19_large_clique_closed_ten_support",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.excessCoverage",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.deficit",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.privateOwners_card_eq_indicator",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.coverage_pointwise_exact",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.private_double_count_exact",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.compensation_identity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.nineteen_bound_iff_compensation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.nineteen_bound_of_positive_deficits",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.critical_degree_nineteen_forces_selected_twenty",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.zero_deficit_remaining_degree_range",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.induced_neighborhood_closed_of_degree_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.induced_clique_image",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.zero_deficit_degree_range",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.zero_deficit_full_degree_witness",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.zero_deficit_full_degree_and_closed_neighborhood",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.closed_ten_edges_card_le_twenty",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.conflict_stays_in_closed_support",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.high19_nineteen_clique_extends_to_twenty",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.high19_nineteen_clique_in_five_cycle_blowup",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.edges_supported_on_two_card_le_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.restricted_degree_two_clique_at_leaf_card_le_three",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.multiple_restricted_degree_add_type_le_four",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.high19_two_triples_outer_card_le_three",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.high19_large_quad_outer_supported",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.high19_large_quad_counts",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.high19_large_quad_positive_type_support",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.high19_no_quad_triple_multiple",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.high19_large_quad_other_types_le_two",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.high19_large_clique_exists_type_four",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.large_clique_exists_root_four",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.high19_triangle_external_multiple_card_le_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.high19_root_triangle_outer_card_le_two",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.high19_large_clique_root_neighborhood_independent",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.root_label_load_add_degree_le_twenty_four",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.high19_root_label_budget_five",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.three_triple_types_share_label",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.high19_no_three_triple_types",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.labels_saturated_of_card_ge_sixteen_add_outer",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.no_triple_of_saturated_independent_labels",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.high19_large_triple_requires_four_outer_edges",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.IsTertiaryOptimal",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.tertiary_optimal_exists",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.private_swap_optimal",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.private_cost_mono_of_equal_degree",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "StrongEdge19.centre_cost_eq_degree_of_private_witness",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "source_hashes": [
+    {
+      "path": "lean/StrongEdge19.lean",
+      "sha256": "bd197677eb39044c2e3d9393322f9af6086c580f323798fd2827c66500c6ad28"
+    },
+    {
+      "path": "lean/StrongEdge19/Audit.lean",
+      "sha256": "a1e887283704e2460c8129b980b586ab38173160f555bde8e128aac3fbf5c1fb"
+    },
+    {
+      "path": "lean/StrongEdge19/BipartiteSupport.lean",
+      "sha256": "899a93c4c106c8a6406b64545def2cc327c2b423abe300d39a85dcf03ef2101f"
+    },
+    {
+      "path": "lean/StrongEdge19/ClosedCore.lean",
+      "sha256": "d45a49f088e693bd9f56c6e9f72da0df3240da608add83b4c972039ab64e6ad8"
+    },
+    {
+      "path": "lean/StrongEdge19/Compensation.lean",
+      "sha256": "1f28348eb54e901fadb4e106277ec09077b35c70d15d8c570651422c4e99cbd4"
+    },
+    {
+      "path": "lean/StrongEdge19/CriticalNineteen.lean",
+      "sha256": "8fea2fdaf7d082420ec94a1731a8e4215456260628f5ea8547b69c01978ecc17"
+    },
+    {
+      "path": "lean/StrongEdge19/CriticalNormalization.lean",
+      "sha256": "1588a509096d26aef218a414a933ea72216ea50b1f875629d99893218b3c1e41"
+    },
+    {
+      "path": "lean/StrongEdge19/NineteenRigidity.lean",
+      "sha256": "7c29e0234c024ddae96d1dc0ab25cbe8f69fc427422d27f1f8e2512f250a44ef"
+    },
+    {
+      "path": "lean/StrongEdge19/OuterSupport.lean",
+      "sha256": "ec3d94589f55d3a7990cef11bc893ed753fc768596c445f5028bbb13dfe6402f"
+    },
+    {
+      "path": "lean/StrongEdge19/QuadCore.lean",
+      "sha256": "3d8120e6ef8cf3e80a5eeda99ba2488dc8e2d805391ca60f767dd2068663e714"
+    },
+    {
+      "path": "lean/StrongEdge19/QuadLoad.lean",
+      "sha256": "3d3cdd92ce5b740c1b61ca2848d5c265a25f7bcacfa4a9e7fe3fd7bb0756d3b0"
+    },
+    {
+      "path": "lean/StrongEdge19/QuadType.lean",
+      "sha256": "d6d14ec9cadd710bf0c491d2f169ece690ce91bf0fc354e44c03b0abeb8892fb"
+    },
+    {
+      "path": "lean/StrongEdge19/Root19.lean",
+      "sha256": "ef69e186a667bff4f13147f1fb302b01b7f4442bb8abfd1acec16ef544d2077a"
+    },
+    {
+      "path": "lean/StrongEdge19/RootLoad.lean",
+      "sha256": "d58800e04752f329e02536411ac634bbc7d569131ce9ad7673e35cc3b66c98ba"
+    },
+    {
+      "path": "lean/StrongEdge19/RootSaturation.lean",
+      "sha256": "1e83ca2f61ea2d80464e46f3236852dd4a1bfcabed500cb2047f5197d045f7d3"
+    },
+    {
+      "path": "lean/StrongEdge19/Tertiary.lean",
+      "sha256": "583dc6ff0c7fdff840a6af4d7bc1251dd1b32ccf7dd11eac347408f8a2fe6aad"
+    },
+    {
+      "path": "lean/lean-toolchain",
+      "sha256": "8f89aa44fccdb1a0b6cc768c7c9f54b94cd40e47a08d582f82d1235f13075cf7"
+    },
+    {
+      "path": "lean/lakefile.toml",
+      "sha256": "79ebccfa40dbeb73b9591993ebc66f622556c2a0438d20dad565797b6208d73e"
+    },
+    {
+      "path": "scripts/build-lean.ps1",
+      "sha256": "adf4365858cfd82d72fe79072335f1bd29c039fc715d3a609350f51bfce09d76"
+    },
+    {
+      "path": "scripts/verify-lean.ps1",
+      "sha256": "7f5efc9a39031fa20b4c0e630e4f2bfe4f15b54c8539c2589947de600549cb63"
+    }
+  ],
+  "source_files_unchanged_after_verification": true,
+  "log": "build-and-audit.log",
+  "scope": "Exact compensation, tertiary normalization, high19 nineteen-clique rigidity, and exclusion of critical degree nineteen. Stage 2 critical degrees twenty through twenty-three and the full corrected nineteen theorem are not yet formalized.",
+  "full_corrected_nineteen_theorem_formalized": false
+}

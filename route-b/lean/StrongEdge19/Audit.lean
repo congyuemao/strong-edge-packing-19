@@ -1,0 +1,58 @@
+module
+
+import StrongEdge19
+
+#check StrongEdge19.compensation_identity
+#check StrongEdge19.zero_deficit_full_degree_and_closed_neighborhood
+#check StrongEdge19.high19_nineteen_clique_in_five_cycle_blowup
+#check StrongEdge19.zero_deficit_remaining_degree_range
+
+#print axioms StrongEdge19.edges_crossing_parts_card_le_product
+#print axioms StrongEdge19.small_complementary_types_outer_card_le_two
+#print axioms StrongEdge19.high19_large_quad_residual_closed
+#print axioms StrongEdge19.high19_large_clique_closed_ten_support
+#print axioms StrongEdge19.excessCoverage
+#print axioms StrongEdge19.deficit
+#print axioms StrongEdge19.privateOwners_card_eq_indicator
+#print axioms StrongEdge19.coverage_pointwise_exact
+#print axioms StrongEdge19.private_double_count_exact
+#print axioms StrongEdge19.compensation_identity
+#print axioms StrongEdge19.nineteen_bound_iff_compensation
+#print axioms StrongEdge19.nineteen_bound_of_positive_deficits
+#print axioms StrongEdge19.critical_degree_nineteen_forces_selected_twenty
+#print axioms StrongEdge19.zero_deficit_remaining_degree_range
+#print axioms StrongEdge19.induced_neighborhood_closed_of_degree_eq
+#print axioms StrongEdge19.induced_clique_image
+#print axioms StrongEdge19.zero_deficit_degree_range
+#print axioms StrongEdge19.zero_deficit_full_degree_witness
+#print axioms StrongEdge19.zero_deficit_full_degree_and_closed_neighborhood
+#print axioms StrongEdge19.closed_ten_edges_card_le_twenty
+#print axioms StrongEdge19.conflict_stays_in_closed_support
+#print axioms StrongEdge19.high19_nineteen_clique_extends_to_twenty
+#print axioms StrongEdge19.high19_nineteen_clique_in_five_cycle_blowup
+#print axioms StrongEdge19.edges_supported_on_two_card_le_one
+#print axioms StrongEdge19.restricted_degree_two_clique_at_leaf_card_le_three
+#print axioms StrongEdge19.multiple_restricted_degree_add_type_le_four
+#print axioms StrongEdge19.high19_two_triples_outer_card_le_three
+#print axioms StrongEdge19.high19_large_quad_outer_supported
+#print axioms StrongEdge19.high19_large_quad_counts
+#print axioms StrongEdge19.high19_large_quad_positive_type_support
+#print axioms StrongEdge19.high19_no_quad_triple_multiple
+#print axioms StrongEdge19.high19_large_quad_other_types_le_two
+#print axioms StrongEdge19.high19_large_clique_exists_type_four
+#print axioms StrongEdge19.large_clique_exists_root_four
+#print axioms StrongEdge19.high19_triangle_external_multiple_card_le_one
+#print axioms StrongEdge19.high19_root_triangle_outer_card_le_two
+#print axioms StrongEdge19.high19_large_clique_root_neighborhood_independent
+#print axioms StrongEdge19.root_label_load_add_degree_le_twenty_four
+#print axioms StrongEdge19.high19_root_label_budget_five
+#print axioms StrongEdge19.three_triple_types_share_label
+#print axioms StrongEdge19.high19_no_three_triple_types
+#print axioms StrongEdge19.labels_saturated_of_card_ge_sixteen_add_outer
+#print axioms StrongEdge19.no_triple_of_saturated_independent_labels
+#print axioms StrongEdge19.high19_large_triple_requires_four_outer_edges
+#print axioms StrongEdge19.IsTertiaryOptimal
+#print axioms StrongEdge19.tertiary_optimal_exists
+#print axioms StrongEdge19.private_swap_optimal
+#print axioms StrongEdge19.private_cost_mono_of_equal_degree
+#print axioms StrongEdge19.centre_cost_eq_degree_of_private_witness

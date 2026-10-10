@@ -1,0 +1,10 @@
+name = "strong_edge_packing_19"
+version = "0.1.0"
+defaultTargets = ["StrongEdge19"]
+
+[[require]]
+name = "strong_edge_lean_starter"
+path = "../../upstream/packing195/lean"
+
+[[lean_lib]]
+name = "StrongEdge19"

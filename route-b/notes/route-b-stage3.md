@@ -2,7 +2,7 @@
 
 Date: 11 October 2026 (Australia/Sydney).
 
-**Status: new paper proof, not Lean-formalized.** This note completes the Route B compensation argument on paper, using the new Stage 2 lemmas. Neither an upstream Lean build nor the finite checks accompanying this note certify these new arguments. The pinned upstream source is unchanged.
+**Status: full packing theorem on paper; core rigidity theorem now Lean-verified.** Theorem 1.2 is formalized in the [new Lean extension](../lean/README.md), together with its application to a degree-nineteen zero-deficit centre. Theorem 1.1 still depends on the new Stage 2 lemmas that remain to be formalized. Neither the historical upstream build nor the finite checks certify those remaining arguments. The pinned upstream source is unchanged.
 
 ## 1. Result and proof dependencies
 

@@ -4,3 +4,5 @@ __pycache__/
 *.py[cod]
 .venv/
 scratch/
+route-b/lean/.lake/
+route-b/lean/.build/
