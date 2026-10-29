@@ -1,0 +1,762 @@
+{
+  "script": "route-c/scripts/strong_clique_search.py",
+  "python": "3.13.2",
+  "pysat_version": "1.9.dev17",
+  "solvers": {
+    "cadical": "CaDiCaL 1.5.3 (pysat Cadical153)",
+    "glucose": "Glucose 4 (pysat Glucose4)"
+  },
+  "all_as_expected": true,
+  "runs": [
+    {
+      "instance": "control-c52-s20",
+      "arguments": [
+        "10",
+        "20"
+      ],
+      "solver": "cadical",
+      "expected": "SAT",
+      "result": "SAT",
+      "clauses": 3096,
+      "solve_seconds": 0.1,
+      "wall_seconds": 0.4,
+      "as_expected": true
+    },
+    {
+      "instance": "control-c52-s20",
+      "arguments": [
+        "10",
+        "20"
+      ],
+      "solver": "glucose",
+      "expected": "SAT",
+      "result": "SAT",
+      "clauses": 3096,
+      "solve_seconds": 0.0,
+      "wall_seconds": 0.4,
+      "as_expected": true
+    },
+    {
+      "instance": "control-c52-s19",
+      "arguments": [
+        "10",
+        "19"
+      ],
+      "solver": "cadical",
+      "expected": "SAT",
+      "result": "SAT",
+      "clauses": 3072,
+      "solve_seconds": 0.0,
+      "wall_seconds": 0.4,
+      "as_expected": true
+    },
+    {
+      "instance": "control-c52-s19",
+      "arguments": [
+        "10",
+        "19"
+      ],
+      "solver": "glucose",
+      "expected": "SAT",
+      "result": "SAT",
+      "clauses": 3072,
+      "solve_seconds": 0.1,
+      "wall_seconds": 0.4,
+      "as_expected": true
+    },
+    {
+      "instance": "control-c9-s18",
+      "arguments": [
+        "9",
+        "18"
+      ],
+      "solver": "cadical",
+      "expected": "SAT",
+      "result": "SAT",
+      "clauses": 2008,
+      "solve_seconds": 0.0,
+      "wall_seconds": 0.4,
+      "as_expected": true
+    },
+    {
+      "instance": "control-c9-s18",
+      "arguments": [
+        "9",
+        "18"
+      ],
+      "solver": "glucose",
+      "expected": "SAT",
+      "result": "SAT",
+      "clauses": 2008,
+      "solve_seconds": 0.0,
+      "wall_seconds": 0.4,
+      "as_expected": true
+    },
+    {
+      "instance": "control-s21",
+      "arguments": [
+        "10",
+        "21"
+      ],
+      "solver": "cadical",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 3112,
+      "solve_seconds": 1.2,
+      "wall_seconds": 1.6,
+      "as_expected": true
+    },
+    {
+      "instance": "control-s21",
+      "arguments": [
+        "10",
+        "21"
+      ],
+      "solver": "glucose",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 3112,
+      "solve_seconds": 0.7,
+      "wall_seconds": 1.1,
+      "as_expected": true
+    },
+    {
+      "instance": "control-s20-excluded",
+      "arguments": [
+        "10",
+        "20",
+        "--not-c52"
+      ],
+      "solver": "cadical",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 3487,
+      "solve_seconds": 10.9,
+      "wall_seconds": 11.3,
+      "as_expected": true
+    },
+    {
+      "instance": "control-s20-excluded",
+      "arguments": [
+        "10",
+        "20",
+        "--not-c52"
+      ],
+      "solver": "glucose",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 3487,
+      "solve_seconds": 9.3,
+      "wall_seconds": 9.6,
+      "as_expected": true
+    },
+    {
+      "instance": "control-R-s17",
+      "arguments": [
+        "10",
+        "17",
+        "--regular-check"
+      ],
+      "solver": "cadical",
+      "expected": "SAT",
+      "result": "SAT",
+      "clauses": 12211,
+      "solve_seconds": 0.4,
+      "wall_seconds": 0.7,
+      "as_expected": true
+    },
+    {
+      "instance": "control-R-s17",
+      "arguments": [
+        "10",
+        "17",
+        "--regular-check"
+      ],
+      "solver": "glucose",
+      "expected": "SAT",
+      "result": "SAT",
+      "clauses": 12211,
+      "solve_seconds": 0.0,
+      "wall_seconds": 0.4,
+      "as_expected": true
+    },
+    {
+      "instance": "control-strong-c52-s20",
+      "arguments": [
+        "10",
+        "20",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "cadical",
+      "expected": "SAT",
+      "result": "SAT",
+      "clauses": 15557,
+      "solve_seconds": 0.0,
+      "wall_seconds": 0.4,
+      "as_expected": true
+    },
+    {
+      "instance": "control-strong-c52-s20",
+      "arguments": [
+        "10",
+        "20",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "glucose",
+      "expected": "SAT",
+      "result": "SAT",
+      "clauses": 15557,
+      "solve_seconds": 0.0,
+      "wall_seconds": 0.4,
+      "as_expected": true
+    },
+    {
+      "instance": "control-strong-c52-s19",
+      "arguments": [
+        "10",
+        "19",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "cadical",
+      "expected": "SAT",
+      "result": "SAT",
+      "clauses": 17613,
+      "solve_seconds": 0.2,
+      "wall_seconds": 0.6,
+      "as_expected": true
+    },
+    {
+      "instance": "control-strong-c52-s19",
+      "arguments": [
+        "10",
+        "19",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "glucose",
+      "expected": "SAT",
+      "result": "SAT",
+      "clauses": 17613,
+      "solve_seconds": 0.0,
+      "wall_seconds": 0.4,
+      "as_expected": true
+    },
+    {
+      "instance": "control-strong-c9-s18",
+      "arguments": [
+        "9",
+        "18",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "cadical",
+      "expected": "SAT",
+      "result": "SAT",
+      "clauses": 13583,
+      "solve_seconds": 0.0,
+      "wall_seconds": 0.3,
+      "as_expected": true
+    },
+    {
+      "instance": "control-strong-c9-s18",
+      "arguments": [
+        "9",
+        "18",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "glucose",
+      "expected": "SAT",
+      "result": "SAT",
+      "clauses": 13583,
+      "solve_seconds": 0.0,
+      "wall_seconds": 0.4,
+      "as_expected": true
+    },
+    {
+      "instance": "control-strong-s21",
+      "arguments": [
+        "10",
+        "21",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "cadical",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 12817,
+      "solve_seconds": 0.1,
+      "wall_seconds": 0.4,
+      "as_expected": true
+    },
+    {
+      "instance": "control-strong-s21",
+      "arguments": [
+        "10",
+        "21",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "glucose",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 12817,
+      "solve_seconds": 0.0,
+      "wall_seconds": 0.4,
+      "as_expected": true
+    },
+    {
+      "instance": "control-strong-s20-excluded",
+      "arguments": [
+        "10",
+        "20",
+        "--not-c52",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "cadical",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 15948,
+      "solve_seconds": 0.2,
+      "wall_seconds": 0.5,
+      "as_expected": true
+    },
+    {
+      "instance": "control-strong-s20-excluded",
+      "arguments": [
+        "10",
+        "20",
+        "--not-c52",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "glucose",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 15948,
+      "solve_seconds": 0.1,
+      "wall_seconds": 0.4,
+      "as_expected": true
+    },
+    {
+      "instance": "R",
+      "arguments": [
+        "10",
+        "19",
+        "--regular-check"
+      ],
+      "solver": "cadical",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 12283,
+      "solve_seconds": 85.4,
+      "wall_seconds": 85.8,
+      "as_expected": true
+    },
+    {
+      "instance": "R",
+      "arguments": [
+        "10",
+        "19",
+        "--regular-check"
+      ],
+      "solver": "glucose",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 12283,
+      "solve_seconds": 101.8,
+      "wall_seconds": 102.1,
+      "as_expected": true
+    },
+    {
+      "instance": "I10",
+      "arguments": [
+        "10",
+        "19",
+        "--not-c52",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "cadical",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 18004,
+      "solve_seconds": 0.5,
+      "wall_seconds": 0.9,
+      "as_expected": true
+    },
+    {
+      "instance": "I10",
+      "arguments": [
+        "10",
+        "19",
+        "--not-c52",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "glucose",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 18004,
+      "solve_seconds": 0.3,
+      "wall_seconds": 0.6,
+      "as_expected": true
+    },
+    {
+      "instance": "I11",
+      "arguments": [
+        "11",
+        "19",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "cadical",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 23762,
+      "solve_seconds": 1.1,
+      "wall_seconds": 1.4,
+      "as_expected": true
+    },
+    {
+      "instance": "I11",
+      "arguments": [
+        "11",
+        "19",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "glucose",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 23762,
+      "solve_seconds": 1.0,
+      "wall_seconds": 1.4,
+      "as_expected": true
+    },
+    {
+      "instance": "I12",
+      "arguments": [
+        "12",
+        "19",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "cadical",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 30367,
+      "solve_seconds": 2.8,
+      "wall_seconds": 3.2,
+      "as_expected": true
+    },
+    {
+      "instance": "I12",
+      "arguments": [
+        "12",
+        "19",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "glucose",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 30367,
+      "solve_seconds": 3.0,
+      "wall_seconds": 3.3,
+      "as_expected": true
+    },
+    {
+      "instance": "I13",
+      "arguments": [
+        "13",
+        "19",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "cadical",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 37476,
+      "solve_seconds": 5.4,
+      "wall_seconds": 5.7,
+      "as_expected": true
+    },
+    {
+      "instance": "I13",
+      "arguments": [
+        "13",
+        "19",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "glucose",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 37476,
+      "solve_seconds": 6.6,
+      "wall_seconds": 7.0,
+      "as_expected": true
+    },
+    {
+      "instance": "I14",
+      "arguments": [
+        "14",
+        "19",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "cadical",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 45140,
+      "solve_seconds": 10.8,
+      "wall_seconds": 11.1,
+      "as_expected": true
+    },
+    {
+      "instance": "I14",
+      "arguments": [
+        "14",
+        "19",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "glucose",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 45140,
+      "solve_seconds": 15.4,
+      "wall_seconds": 15.8,
+      "as_expected": true
+    },
+    {
+      "instance": "I15",
+      "arguments": [
+        "15",
+        "19",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "cadical",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 53413,
+      "solve_seconds": 20.9,
+      "wall_seconds": 21.3,
+      "as_expected": true
+    },
+    {
+      "instance": "I15",
+      "arguments": [
+        "15",
+        "19",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "glucose",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 53413,
+      "solve_seconds": 25.1,
+      "wall_seconds": 25.6,
+      "as_expected": true
+    },
+    {
+      "instance": "I16",
+      "arguments": [
+        "16",
+        "19",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "cadical",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 62352,
+      "solve_seconds": 32.4,
+      "wall_seconds": 32.9,
+      "as_expected": true
+    },
+    {
+      "instance": "I16",
+      "arguments": [
+        "16",
+        "19",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "glucose",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 62352,
+      "solve_seconds": 42.7,
+      "wall_seconds": 43.1,
+      "as_expected": true
+    },
+    {
+      "instance": "I17",
+      "arguments": [
+        "17",
+        "19",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "cadical",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 72017,
+      "solve_seconds": 41.0,
+      "wall_seconds": 41.4,
+      "as_expected": true
+    },
+    {
+      "instance": "I17",
+      "arguments": [
+        "17",
+        "19",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "glucose",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 72017,
+      "solve_seconds": 57.4,
+      "wall_seconds": 57.9,
+      "as_expected": true
+    },
+    {
+      "instance": "I18",
+      "arguments": [
+        "18",
+        "19",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "cadical",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 82471,
+      "solve_seconds": 59.5,
+      "wall_seconds": 60.0,
+      "as_expected": true
+    },
+    {
+      "instance": "I18",
+      "arguments": [
+        "18",
+        "19",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "glucose",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 82471,
+      "solve_seconds": 83.9,
+      "wall_seconds": 84.3,
+      "as_expected": true
+    },
+    {
+      "instance": "I19",
+      "arguments": [
+        "19",
+        "19",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "cadical",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 93780,
+      "solve_seconds": 78.7,
+      "wall_seconds": 79.2,
+      "as_expected": true
+    },
+    {
+      "instance": "I19",
+      "arguments": [
+        "19",
+        "19",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "glucose",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 93780,
+      "solve_seconds": 95.5,
+      "wall_seconds": 96.0,
+      "as_expected": true
+    },
+    {
+      "instance": "I20",
+      "arguments": [
+        "20",
+        "19",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "cadical",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 106013,
+      "solve_seconds": 95.6,
+      "wall_seconds": 96.1,
+      "as_expected": true
+    },
+    {
+      "instance": "I20",
+      "arguments": [
+        "20",
+        "19",
+        "--sym",
+        "--count",
+        "--lex"
+      ],
+      "solver": "glucose",
+      "expected": "UNSAT",
+      "result": "UNSAT",
+      "clauses": 106013,
+      "solve_seconds": 118.6,
+      "wall_seconds": 119.1,
+      "as_expected": true
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "status": "built",
+  "manuscript_sha256": "c28297bfe3a64efb3fe17456045e2c806df2b6fe1ccfc67b51b094674998fbac",
+  "pdf_sha256": "333d730f8aa087d4dbb14212f5f269a45e72141a9b0d569eebbf283ce3ccf5b7",
+  "builder_sha256": "1b1e5634f7a88cd666650e242f73f9033205a25c1073a44e4e063c1e8b9778e5",
+  "reportlab_version": "4.4.9",
+  "matplotlib_version": "3.11.2",
+  "pages": 9,
+  "source_blocks": 135,
+  "display_equations": 10,
+  "tables": 2,
+  "equation_tags": [
+    "1.1",
+    "1.2",
+    "1.3",
+    "1.4",
+    "3.1",
+    "3.2"
+  ],
+  "author": "Congyue Mao",
+  "page_size": "A4",
+  "body_font": "Times New Roman",
+  "body_font_size_points": 11,
+  "body_leading_points": 14.3,
+  "math_font": "STIX",
+  "math_rendering": "Embedded font glyphs and vector rules",
+  "scope": "Typesetting provenance, not verification of the English proof or of the SAT computations."
+}
