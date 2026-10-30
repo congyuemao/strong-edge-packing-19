@@ -44,7 +44,7 @@ The audit examined commit `028f4d3541ad41a558b3d1f5c8fd962046ea24dd`. Its suppor
 - **Nineteen-edge strong cliques.** Every strong clique with at least nineteen edges lies inside a $C_5[2]$ component. This removes the conflict-degree hypothesis from the nineteen-clique rigidity theorem.
 - **Two cases of the eighteen bound.** The bound holds for $F=E(G)$ and whenever $\nu_s^G(F)\le1$.
 
-The clique theorem is computer-assisted: a hand-proved reduction is followed by an exhaustive SAT search, with each instance checked by two independent solvers. Route C is not formalized in Lean, and the general eighteen bound remains open.
+The clique theorem is computer-assisted: a hand-proved reduction is followed by an exhaustive SAT search, with each instance checked by two independent solvers. The circulant result is formalized in Lean ([route-c/lean](route-c/lean/README.md)); the clique theorem is not, and the general eighteen bound remains open.
 
 ## Reproduction and research history
 

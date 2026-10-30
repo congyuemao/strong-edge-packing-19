@@ -1,0 +1,14 @@
+{
+  "scope": "Lean kernel check of route-c/lean (Proposition 1.1 of the Route C manuscript) and axiom audit of every declaration. It does not cover Theorem 1.2 or the SAT search.",
+  "date": "2026-10-30",
+  "toolchain": "leanprover/lean4:v4.35.0-rc4",
+  "lake": "Lake version 5.0.0-src+c29b6dd (Lean version 4.35.0-rc4)",
+  "mathlib_rev": "49fd9dee36e7bbf345fe7981d2de6aeeb591f75b",
+  "upstream_packing195_commit": "2e91b05b25a4ee931a0490fefcdbb4f253be95c8",
+  "build": "Build completed successfully (1186 jobs)",
+  "declarations_audited": 12,
+  "axiom_union": ["propext", "Classical.choice", "Quot.sound"],
+  "uses_sorry": false,
+  "uses_native_decide": false,
+  "log": "build-and-audit.log"
+}

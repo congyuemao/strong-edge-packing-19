@@ -1,0 +1,36 @@
+$ lake --version
+Lake version 5.0.0-src+c29b6dd (Lean version 4.35.0-rc4)
+
+$ lake build
+Build completed successfully (1186 jobs).
+
+$ lake env lean StrongEdgeRouteC/Audit.lean
+StrongEdgeRouteC.circulant913_all_edges_strong_clique :
+  (StrongEdge.conflictGraph StrongEdgeRouteC.circulant913).IsClique Set.univ
+StrongEdgeRouteC.circulant913_refutes_m_div_17 :
+  (∀ (x : Fin 9), StrongEdgeRouteC.circulant913.degree x ≤ 4) ∧
+    (∀ (S : Finset (Fin 9)), ¬StrongEdge.IsFiveCycleBlowupComponent StrongEdgeRouteC.circulant913 S) ∧
+      ∀ (M : Finset ↑StrongEdgeRouteC.circulant913.edgeSet),
+        StrongEdge.IsInducedMatching StrongEdgeRouteC.circulant913 ↑M → 17 * M.card < Finset.univ.card
+StrongEdgeRouteC.circulant913_eighteen_bound_attained :
+  ∃ M,
+    StrongEdge.IsInducedMatching StrongEdgeRouteC.circulant913 ↑M ∧
+      Finset.univ.card = 18 * M.card ∧
+        ∀ (M' : Finset ↑StrongEdgeRouteC.circulant913.edgeSet),
+          StrongEdge.IsInducedMatching StrongEdgeRouteC.circulant913 ↑M' → M'.card ≤ M.card
+'StrongEdgeRouteC.circulantAdj' depends on axioms: [propext]
+'StrongEdgeRouteC.circulantAdj_symm' depends on axioms: [propext]
+'StrongEdgeRouteC.circulantAdj_irrefl' depends on axioms: [propext]
+'StrongEdgeRouteC.circulant913' depends on axioms: [propext]
+'StrongEdgeRouteC.circulant913_degree_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdgeRouteC.circulant913_edge_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdgeRouteC.circulant913_all_edges_strong_clique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdgeRouteC.circulant913_induced_matching_card_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdgeRouteC.circulant913_exists_induced_matching_card_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StrongEdgeRouteC.circulant913_no_five_cycle_blowup_component' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StrongEdgeRouteC.circulant913_refutes_m_div_17' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StrongEdgeRouteC.circulant913_eighteen_bound_attained' depends on axioms: [propext, Classical.choice, Quot.sound]

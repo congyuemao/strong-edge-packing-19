@@ -1,0 +1,20 @@
+module
+
+import StrongEdgeRouteC
+
+#check StrongEdgeRouteC.circulant913_all_edges_strong_clique
+#check StrongEdgeRouteC.circulant913_refutes_m_div_17
+#check StrongEdgeRouteC.circulant913_eighteen_bound_attained
+
+#print axioms StrongEdgeRouteC.circulantAdj
+#print axioms StrongEdgeRouteC.circulantAdj_symm
+#print axioms StrongEdgeRouteC.circulantAdj_irrefl
+#print axioms StrongEdgeRouteC.circulant913
+#print axioms StrongEdgeRouteC.circulant913_degree_four
+#print axioms StrongEdgeRouteC.circulant913_edge_count
+#print axioms StrongEdgeRouteC.circulant913_all_edges_strong_clique
+#print axioms StrongEdgeRouteC.circulant913_induced_matching_card_le_one
+#print axioms StrongEdgeRouteC.circulant913_exists_induced_matching_card_one
+#print axioms StrongEdgeRouteC.circulant913_no_five_cycle_blowup_component
+#print axioms StrongEdgeRouteC.circulant913_refutes_m_div_17
+#print axioms StrongEdgeRouteC.circulant913_eighteen_bound_attained

@@ -12,7 +12,8 @@ from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parents[2]
 ROUTE = ROOT / "route-c"
-DOCS = [ROOT / "README.md", ROUTE / "README.md", ROUTE / "manuscript" / "eighteen.md"]
+DOCS = [ROOT / "README.md", ROUTE / "README.md", ROUTE / "manuscript" / "eighteen.md",
+        ROUTE / "lean" / "README.md"]
 RANGES = [(0x3040, 0x30FF), (0x3400, 0x4DBF), (0x4E00, 0x9FFF), (0xAC00, 0xD7AF)]
 CJK = re.compile("[" + "".join(chr(a) + "-" + chr(b) for a, b in RANGES) + "]")
 

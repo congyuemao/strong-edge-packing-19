@@ -8,12 +8,13 @@ $C_5[2]$.
 - [Manuscript (PDF)](manuscript/eighteen.pdf)
 - [Editable mathematical source](manuscript/eighteen.md)
 - [PDF build provenance](manuscript/pdf-build.json)
+- [Lean formalization of Proposition 1.1](lean/README.md)
 
 ## Results and their status
 
 | Result | Statement | Status |
 | --- | --- | --- |
-| Proposition 1.1 | All eighteen edges of $C_9(1,3)$ pairwise conflict, so $\nu_s=m/18$. This refutes Joos's conjecture $\nu_s\ge m/17$ (arXiv:1407.8336v1, Conjecture 2). | Paper proof and a direct check |
+| Proposition 1.1 | All eighteen edges of $C_9(1,3)$ pairwise conflict, so $\nu_s=m/18$. This refutes Joos's conjecture $\nu_s\ge m/17$ (arXiv:1407.8336v1, Conjecture 2). | Paper proof, a direct check, and a Lean formalization ([route-c/lean](lean/README.md)) |
 | Theorem 1.2 | Every strong clique with at least nineteen edges lies inside a $C_5[2]$ component. | Paper reduction plus an exhaustive SAT search with two independent solvers |
 | Corollary 1.3 | Without $C_5[2]$ components the strong clique number is at most eighteen, attained by $C_9(1,3)$. | Follows from Theorem 1.2 and Proposition 1.1 |
 | Theorem 1.5 | The eighteen bound holds for $F=E(G)$ and whenever $\nu_s^G(F)\le 1$; it is sharp. | Paper proof using Joos's theorem and Theorem 1.2 |
@@ -24,7 +25,7 @@ Theorem 1.2 removes the conflict-degree hypothesis from Route B's nineteen-cliqu
 ([manuscript Theorem 6.1](../route-b/manuscript/packing19.md#6-stage-3-nineteen-clique-rigidity-through-a-closed-support)).
 
 **Not established.**
-- No part of Route C is formalized in Lean.
+- Only Proposition 1.1 is formalized in Lean ([route-c/lean](lean/README.md)). Theorem 1.2 and the results that depend on it are not.
 - The SAT results carry no DRAT or LRAT certificates.
 - The search is trustworthy only to the extent that the encoder is correct. For this reason the
   manuscript reports positive and negative controls.
