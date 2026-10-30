@@ -1,7 +1,7 @@
 {
   "status": "built",
-  "manuscript_sha256": "106c6c5e9733e0f8e186a5132f16c6b4040da37a1c92d9802c231c0f9ce9c4e0",
-  "pdf_sha256": "586f2d822c481400e8245f50e6788ee362324557e8a3a482e32aa590b3f88394",
+  "manuscript_sha256": "1641f81cdcf4386bd4d396b6c946d53794ee828fd20f68a33d161d9f6e6cde40",
+  "pdf_sha256": "fdbee2117654d17a12a9b56a66208ff9460af48bedfe59d0fedc195b09c4ca3c",
   "builder_sha256": "1b1e5634f7a88cd666650e242f73f9033205a25c1073a44e4e063c1e8b9778e5",
   "reportlab_version": "4.4.9",
   "matplotlib_version": "3.11.2",
