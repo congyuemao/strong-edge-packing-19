@@ -1,12 +1,12 @@
 {
   "status": "built",
-  "manuscript_sha256": "c28297bfe3a64efb3fe17456045e2c806df2b6fe1ccfc67b51b094674998fbac",
-  "pdf_sha256": "333d730f8aa087d4dbb14212f5f269a45e72141a9b0d569eebbf283ce3ccf5b7",
+  "manuscript_sha256": "1641f81cdcf4386bd4d396b6c946d53794ee828fd20f68a33d161d9f6e6cde40",
+  "pdf_sha256": "fdbee2117654d17a12a9b56a66208ff9460af48bedfe59d0fedc195b09c4ca3c",
   "builder_sha256": "1b1e5634f7a88cd666650e242f73f9033205a25c1073a44e4e063c1e8b9778e5",
   "reportlab_version": "4.4.9",
   "matplotlib_version": "3.11.2",
   "pages": 9,
-  "source_blocks": 135,
+  "source_blocks": 143,
   "display_equations": 10,
   "tables": 2,
   "equation_tags": [

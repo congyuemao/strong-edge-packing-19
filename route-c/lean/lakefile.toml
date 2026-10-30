@@ -1,0 +1,10 @@
+name = "strong_edge_route_c"
+version = "0.1.0"
+defaultTargets = ["StrongEdgeRouteC"]
+
+[[require]]
+name = "strong_edge_lean_starter"
+path = "../../upstream/packing195/lean"
+
+[[lean_lib]]
+name = "StrongEdgeRouteC"

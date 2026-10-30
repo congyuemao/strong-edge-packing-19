@@ -6,3 +6,5 @@ __pycache__/
 scratch/
 route-b/lean/.lake/
 route-b/lean/.build/
+route-c/lean/.lake/
+route-c/lean/.build/

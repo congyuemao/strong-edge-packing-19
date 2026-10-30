@@ -103,7 +103,7 @@ Every edge has an endpoint other than $5$, so it conflicts with $\{0,1\}$. An ed
 
 Edges in different components never conflict, so $\nu_s$ is additive over components. A disjoint union of $k$ copies thus has $m=18k$ and $\nu_s=k<m/17$. It has maximum degree four and no $C_5[2]$ component, so it contradicts the conjecture. ∎
 
-A direct computation (Appendix A) confirms the 153 conflicting pairs and $\nu_s=1$. Among all connected 4-regular graphs with at most thirteen vertices, $C_9(1,3)$ is the only one other than $C_5[2]$ whose strong clique number reaches eighteen.
+A direct computation confirms the 153 conflicting pairs and $\nu_s=1$, and the proposition is formalized in Lean (Appendix A). Among all connected 4-regular graphs with at most thirteen vertices, $C_9(1,3)$ is the only one other than $C_5[2]$ whose strong clique number reaches eighteen.
 
 ## 3. An incidence inequality for strong cliques
 
@@ -256,7 +256,7 @@ For sharpness, $C_9(1,3)$ with $F=E(G)$ has $|F|=18=18\nu_s$ and $\tau=0$. Ninet
 
 **Proof of Proposition 1.6.** Let $C$ be a $C_5[2]$ component. If $|F\cap E(C)|=19$, then $C$ contributes one to $\tau_G(F)$ and nothing to $t_G(F)$. If $|F\cap E(C)|=20$, it contributes two and one, respectively. Otherwise it contributes nothing to either. Hence $\tau_G(F)-t_G(F)$ is the number of components $C$ with $|F\cap E(C)|\geq19$. Choosing one edge of $F$ in each such component gives an induced matching, so $\tau_G(F)-t_G(F)\leq\nu_s^G(F)$. Therefore $18\nu_s^G(F)+\tau_G(F)\leq19\nu_s^G(F)+t_G(F)$. ∎
 
-**Remarks.** The cases proved here are those in which $F$ is either the whole edge set or a single strong clique. The first open case is $\nu_s^G(F)=2$, where (1.4) asks for $|F|\leq36$ outside $C_5[2]$ components. The method of Sections 3–5 does not extend directly: an edge set without three pairwise non-conflicting edges need not have a small endpoint set. The examples of Theorem 1.5 are all disjoint unions of strong cliques. We do not know a connected example with $\nu_s^G(F)\geq2$ attaining (1.4), nor a connected graph without $C_5[2]$ components with $\nu_s(G)<m(G)/17$.
+**Remarks.** The cases proved here are those in which $F$ is either the whole edge set or a single strong clique. The first open case is $\nu_s^G(F)=2$, where (1.4) asks for $|F|\leq36$ outside $C_5[2]$ components. The method of Sections 3–5 does not extend directly: an edge set without three pairwise non-conflicting edges need not have a small endpoint set. The examples of Theorem 1.5 are all disjoint unions of strong cliques. We do not know a connected example with $\nu_s^G(F)\geq2$ attaining (1.4). The circulant $C_9(1,3)$ is itself a connected graph with $\nu_s(G)<m(G)/17$. We do not know a connected one with $\nu_s(G)\geq2$, that is, whether the conjecture already fails for connected graphs with larger induced matching number.
 
 ## Appendix A. Verification status and scope
 
@@ -269,9 +269,20 @@ For sharpness, $C_9(1,3)$ with $F=E(G)$ has $|F|=18=18\nu_s$ and $\tau=0$. Ninet
 - The conflict check and induced matching number of $C_9(1,3)$.
 - The strong clique numbers of all connected 4-regular graphs with at most thirteen vertices. They are computed from the graph lists in the Route C data directory, which the enumeration script regenerates; their counts agree with OEIS A006820.
 
+**Lean formalization.** Proposition 1.1 is formalized in the [Route C Lean package](../lean/README.md), on top of the pinned 19.5 definitions of conflict, induced matching and $C_5[2]$ component. The formalization covers the following facts:
+
+- $C_9(1,3)$ is 4-regular with eighteen edges;
+- its edges pairwise conflict;
+- every induced matching has at most one edge;
+- it has no $C_5[2]$ component;
+- $17|M|<m$ for every induced matching $M$;
+- $m=18\nu_s$.
+
+Finite facts use kernel-checked `decide`. The axiom audit of all twelve declarations reports only `propext`, `Classical.choice` and `Quot.sound` ([record](../lean/verification/results.json)).
+
 **Not established.**
 
-- The SAT results are not accompanied by DRAT or LRAT certificates, and no part of this manuscript is formalized in Lean.
+- The SAT results are not accompanied by DRAT or LRAT certificates, and Theorem 1.2 and its consequences are not formalized in Lean.
 - The search depends on the correctness of the encoder; that is why the controls are reported.
 - Conjecture 1.4 remains open for $\nu_s^G(F)\geq2$ and $F\neq E(G)$.
 - We found no earlier statement of Proposition 1.1 or Theorem 1.2. Our literature search used arXiv:1407.8336v1, which is the only arXiv version, and general web searches. We could not access the journal version [8], so we do not know whether Joos's conjecture appears there.
